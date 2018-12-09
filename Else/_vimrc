@@ -1,0 +1,14 @@
+filetype plugin on
+set nu
+set nocompatible
+set noswapfile
+set noswf
+colo koehler
+set encoding=utf-8
+set fileencoding=utf-8
+set autoindent
+set showcmd
+
+set shiftwidth=4
+set tabstop=4
+set softtabstop=4

@@ -1,0 +1,32 @@
+## Method 1
+[ref](https://stackoverflow.com/questions/23155244/spring-boot-hotswap-with-intellij-ide)
+
+A solution that uses devTools works:
+
+### Adding devtools to your project
+
+```xml
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-devtools</artifactId>
+</dependency>
+```
+
+### Enabling automatic build
+
+Open the Settings --> Build-Execution-Deployment --> Compiler and enable :
+
+	Build Project Automatically.
+
+### Update the value of `compiler.automake.allow.when.app.running`
+
+press `ctrl+shift+A` and search for the registry. In the registry, enable :
+
+`compiler.automake.allow.when.app.running`
+
+
+References :
+
+https://dzone.com/articles/spring-boot-application-live-reload-hot-swap-with
+
+> Press `Ctrl-Alt-Shift-/` and select "Registry" from the menu that appears.

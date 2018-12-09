@@ -1,39 +1,38 @@
-# GitBlog
+# Blog
 
-#### 项目介绍
-{**以下是码云平台说明，您可以替换为您的项目简介**
-码云是开源中国推出的基于 Git 的代码托管平台（同时支持 SVN）。专为开发者提供稳定、高效、安全的云端软件开发协作平台
-无论是个人、团队、或是企业，都能够用码云实现代码托管、项目管理、协作开发。企业项目请看 [https://gitee.com/enterprises](https://gitee.com/enterprises)}
+## JavaScript
 
-#### 软件架构
-软件架构说明
+* [关于闭包](https://github.com/Allen-Wei/GitBlog/blob/master/JavaScript/About_Closure.md)
 
+## ASP.Net
 
-#### 安装教程
+* [ASP.Net 身份模块介绍](https://github.com/Allen-Wei/GitBlog/blob/master/Asp.Net/Asp.Net%20%E8%BA%AB%E4%BB%BD%E7%B3%BB%E7%BB%9F.md)
 
-1. xxxx
-2. xxxx
-3. xxxx
+## CSharp
 
-#### 使用说明
+* [Dynamic in C# 4.0: Creating Wrappers with DynamicObject](https://github.com/Allen-Wei/GitBlog/blob/master/CSharp/%5BTranslate%5D%20Dynamic%20in%20C%23%204.0%20Creating%20Wrappers%20with%20DynamicObject.md)
 
-1. xxxx
-2. xxxx
-3. xxxx
+* [Inheritance and Representation](https://github.com/Allen-Wei/GitBlog/blob/master/CSharp/%5BTranslate%5D%20Inheritance_and_Representation.md)
 
-#### 参与贡献
+## RabbitMQ
 
-1. Fork 本项目
-2. 新建 Feat_xxx 分支
-3. 提交代码
-4. 新建 Pull Request
+[RabbitMQ 安装](https://github.com/Allen-Wei/GitBlog/blob/master/RabbitMQ/Install.md)
 
+### RabbitMQ 官方系列教程 翻译
 
-#### 码云特技
+* [1 "Hello World!"](https://github.com/Allen-Wei/GitBlog/blob/master/RabbitMQ/RabbitMQ-Tutorials-1-HelloWorld.md)
 
-1. 使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2. 码云官方博客 [blog.gitee.com](https://blog.gitee.com)
-3. 你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解码云上的优秀开源项目
-4. [GVP](https://gitee.com/gvp) 全称是码云最有价值开源项目，是码云综合评定出的优秀开源项目
-5. 码云官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6. 码云封面人物是一档用来展示码云会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+* [2 Work queues](https://github.com/Allen-Wei/GitBlog/blob/master/RabbitMQ/RabbitMQ-Tutorials-2-WorkQueues.md)
+
+* [3 Publish/Subscribe](https://github.com/Allen-Wei/GitBlog/blob/master/RabbitMQ/RabbitMQ-Tutorials-3-Publish-Subscribe.md)
+
+* [4 Routing](https://github.com/Allen-Wei/GitBlog/blob/master/RabbitMQ/RabbitMQ-Tutorials-4-Routing.md)
+
+* [5 Topics](https://github.com/Allen-Wei/GitBlog/blob/master/RabbitMQ/RabbitMQ-Tutorials-5-Topic.md)
+
+* [6 RPC](https://github.com/Allen-Wei/GitBlog/blob/master/RabbitMQ/RabbitMQ-Tutorials-6-RPC.md)
+
+## Server
+
+* [Windows 上的TCP代理设置](https://github.com/Allen-Wei/GitBlog/blob/master/Server/Tcp-Proxy-In-Windows.md)
+
