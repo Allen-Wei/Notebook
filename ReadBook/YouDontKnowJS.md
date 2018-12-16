@@ -135,6 +135,39 @@ if (!Number.isSafeInteger) {
     }; 
 }
 ```
+#### 不是值的值
+
+`null` 是一个特殊关键字，不是标识符，我们不能将其当作变量来使用和赋值。然而 `undefined` 却是一个标识符，可以被当作变量来使用和赋值。
+
+#### NaN
+
+`isNaN` 会对输入参数进行类型转换(`ToNumber`), 然后再判断是否是 `NaN`, `ToNumber`转换规则参考ECMA规范: 
+![ToNumber](../Resources/JavaScript.ToNumber.png)
+
+```javascript
+isNaN(NaN)          // true
+isNaN(undefined)    // true, 因为 ToNumber(underfined) => NaN
+isNaN(0)            // false
+isNaN(null)         // false, 因为 ToNumber(null) => 0
+```
+
+`Number.isNaN` 会判断输入参数是否是`number`类型, 等同于如下代码:
+
+```javascript
+if (!Number.isNaN) {
+    Number.isNaN = function(n) {
+        return (typeof n === "number" && window.isNaN( n ) );
+    };
+} 
+
+// OR
+
+if (!Number.isNaN) {
+    Number.isNaN = function(n) {
+        return n !== n;
+    };
+}
+```
 
 # Progress
 
