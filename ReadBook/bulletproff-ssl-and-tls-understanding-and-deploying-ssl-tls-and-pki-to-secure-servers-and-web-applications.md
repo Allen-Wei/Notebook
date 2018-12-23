@@ -123,4 +123,13 @@ $ openssl x509 -text -in fd.crt -noout
 包含原始格式的X.509证书，使用DER ASN.1编码。
 
 2. ASCII (PEM) certificate(s)
-包含base64编码过的DER证书，它们以`-----BEGIN CERTIFICATE-----`开头，以`-----END CERTIFICATE-----`结尾。虽然有些程序可以允许多个证书存在一个文件中，但是一般来说 一个文件只有一张证书。例如Apache Web服务器要求服务器的证书全部在一个文件里面， 而中间证书一起放在另外一个文件中。
+包含base64编码过的DER证书，它们以`-----BEGIN CERTIFICATE-----`开头，以`-----END CERTIFICATE-----`结尾。虽然有些程序可以允许多个证书存在一个文件中，但是一般来说一个文件只有一张证书。例如Apache Web服务器要求服务器的证书全部在一个文件里面， 而中间证书一起放在另外一个文件中。
+
+3. Binary (DER) key
+包含DER ASN.1编码后的私钥的原始格式。OpenSSL使用他自己传统的方式创建密钥(SSLeay)格式。还有另外一种不常使用的格式叫作PKCS#8(RFC 5208定义的)。OpenSSL 可以使用pkcs8命令进行PKCS#8格式的转换。
+
+4. ASCII (PEM) key
+包括base64编码后的DER密钥和一些元数据信息(例如密码的保存算法)。
+
+5. PKCS#7 certificate(s)
+RFC 2315定义的一种比较复杂的格式，设计的目的是用于签名和加密数据的传输。一般 常见的是.p7b和.p7c扩展名的文件，并且文件里面可以包括所需的整个证书链。Java的密钥管理工具支持这种格式。
