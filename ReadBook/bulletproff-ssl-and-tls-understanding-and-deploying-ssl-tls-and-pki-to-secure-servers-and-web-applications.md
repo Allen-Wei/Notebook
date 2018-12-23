@@ -119,22 +119,71 @@ $ openssl x509 -text -in fd.crt -noout
 
 私钥和证书可以以各种格式进行存储，所以你可能经常需要进行各种格式之间的转换，最常见的格式如下:
 
-1. Binary (DER) certificate
-
+#### Binary (DER) certificate
 包含原始格式的X.509证书，使用DER ASN.1编码。
 
-2. ASCII (PEM) certificate(s)
-
+#### ASCII (PEM) certificate(s)
 包含base64编码过的DER证书，它们以`-----BEGIN CERTIFICATE-----`开头，以`-----END CERTIFICATE-----`结尾。虽然有些程序可以允许多个证书存在一个文件中，但是一般来说一个文件只有一张证书。例如Apache Web服务器要求服务器的证书全部在一个文件里面， 而中间证书一起放在另外一个文件中。
 
-3. Binary (DER) key
-
+#### Binary (DER) key
 包含DER ASN.1编码后的私钥的原始格式。OpenSSL使用他自己传统的方式创建密钥(SSLeay)格式。还有另外一种不常使用的格式叫作PKCS#8(RFC 5208定义的)。OpenSSL 可以使用pkcs8命令进行PKCS#8格式的转换。
 
-4. ASCII (PEM) key
-
+#### ASCII (PEM) key
 包括base64编码后的DER密钥和一些元数据信息(例如密码的保存算法)。
 
-5. PKCS#7 certificate(s)
+#### PKCS#7 certificate(s)
+RFC 2315定义的一种比较复杂的格式，设计的目的是用于签名和加密数据的传输。一般常见的是.p7b和.p7c扩展名的文件，并且文件里面可以包括所需的整个证书链。Java的密钥管理工具支持这种格式。
 
-RFC 2315定义的一种比较复杂的格式，设计的目的是用于签名和加密数据的传输。一般 常见的是.p7b和.p7c扩展名的文件，并且文件里面可以包括所需的整个证书链。Java的密钥管理工具支持这种格式。
+#### PKCS#12 (PFX) key and certificate(s)
+一种可以用来保存服务器私钥和整个证书链的复杂格式，一般以.p12和.pfx扩展名结尾。 这类格式常见于Microsoft的产品，但是也用于客户端证书。虽然很久以前PFX表示 PKCS#12之前的版本，现在PFX常被用作PKCS#12的代名词，不过你已经很难遇到老版本 了。
+
+#### PEM和DER转换 
+使用x509工具进行PEM和DER格式之间的证书转换，从PEM转换到DER:
+```bash
+$ openssl x509 -inform PEM -in fd.pem -outform DER -out fd.der
+```
+从DER转换到PEM:
+```bash
+$ openssl x509 -inform DER -in fd.der -outform PEM -out fd.pem
+```
+在私钥的DER和PEM格式之间进行转换方式是一样的，但是需要使用rsa或者dsa命令分别用 作RSA和DSA密钥。
+
+#### PKCS#12(PFX)转换
+只需要一个命令就可以将PEM转换成PKCS#12。下面的例子将密钥(fd.key)、证书(fd.crt) 以及中间证书(fd-chain.crt)转换成一个PKCS#12文件:
+```bash
+ $ openssl pkcs12 -export -name "My Certificate" -out fd.p12 -inkey fd.key -in fd.crt -certfile fd-chain.crt
+```
+如果想反过来转换就没那么直接了，虽然也可以使用一个命令，但是这样结果也会存在一个文件里面:
+```bash
+$ openssl pkcs12 -in fd.p12 -out fd.pem -nodes
+```
+现在可以用你最喜欢的编辑器打开fd.pem然后手动将其分为独立的密钥、证书和中间证书文件，同时你会发现每一部分的前面都有额外的内容.
+
+#### PKCS#7转换
+使用crl2pkcs7命令将PEM转换成PKCS#7格式:
+```bash
+$ openssl crl2pkcs7 -nocrl -out fd.p7b -certfile fd.crt -certfile fd-chain.crt 
+```
+将pkcs7命令与-print_certs开关一起使用可以将PKCS#7转换成PEM格式:
+```bash
+$ openssl pkcs7 -in fd.p7b -print_certs -out fd.pem
+```
+与PKCS#12一样，你还得手动编辑fd.pem文件并且将其分成不同部分。
+
+## 11.3 配置
+
+获取所支持的套件列表:
+```bash
+$ openssl ciphers -v 'ALL:COMPLEMENTOFALL'
+```
+我这里一共输出了111个套件，每一行都包含一个套件的信息和下面这些信息: 
+1. 套件名称
+2. 最低的TLS版本
+3. 密钥交换算法
+4. 密钥验证算法
+5. 对称加密算法和长度
+6. 消息摘要(完整性检查)算法
+7. 出口套件指示符
+
+# NOTE
+* 2018-12-23 P287/308
