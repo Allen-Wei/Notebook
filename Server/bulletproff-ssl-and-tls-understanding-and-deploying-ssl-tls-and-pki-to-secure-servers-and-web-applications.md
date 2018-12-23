@@ -114,3 +114,13 @@ x509命令可以帮助你查看刚生成的自签名证书。下面使用`-text`
 ```bash
 $ openssl x509 -text -in fd.crt -noout
 ```
+
+### 11.2.8 密钥和证书格式转换
+
+私钥和证书可以以各种格式进行存储，所以你可能经常需要进行各种格式之间的转换，最常见的格式如下:
+
+1. Binary (DER) certificate
+包含原始格式的X.509证书，使用DER ASN.1编码。
+
+2. ASCII (PEM) certificate(s)
+包含base64编码过的DER证书，它们以`-----BEGIN CERTIFICATE-----`开头，以`-----END CERTIFICATE-----`结尾。虽然有些程序可以允许多个证书存在一个文件中，但是一般来说 一个文件只有一张证书。例如Apache Web服务器要求服务器的证书全部在一个文件里面， 而中间证书一起放在另外一个文件中。
