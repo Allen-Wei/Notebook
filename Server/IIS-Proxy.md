@@ -13,11 +13,11 @@ URL Rewrite Module is officially provided by IIS development tool to extend the 
 
 You can visit below URL and download and install URL rewrite IIS extension:
 
-http://www.iis.net/downloads/microsoft/url-rewrite
+![http://www.iis.net/downloads/microsoft/url-rewrite](../Resources/IIS_ARR_requestRouter_amd64.msi)
 
 You also need Application Request Routing extension to install on your system. Visit the following URL to download the extension and install on your system.
 
-https://www.iis.net/downloads/microsoft/application-request-routing
+![https://www.iis.net/downloads/microsoft/application-request-routing](../Resources/IIS_URL_Rewriter_rewrite_amd64_en-US)
 
 For more details, visit our other article here.
 
