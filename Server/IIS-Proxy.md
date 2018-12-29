@@ -45,6 +45,6 @@ The above option will open a window, Add the server name or IP address with port
 
 At this point, the reverse proxy setup has been done. Now access web site configured with IIS. You will see the backend application is accessible here. This is the reverse proxy in working.
 
-![Reverse proxy using IIS 6](..Resources/site-access-with-proxy.png)
+![Reverse proxy using IIS 6](../Resources/site-access-with-proxy.png)
 
 This is the reverse proxy in working.
