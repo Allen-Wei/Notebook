@@ -27,7 +27,7 @@ Object.setPrototypeOf(child, parent);
 console.log(getAllPropertyNames(child)); //=> [firstName, lastName]
 ```
 
-来源: [Is it possible to get the non-enumerable inherited property names of an object?
+资料来源: [Is it possible to get the non-enumerable inherited property names of an object?
 ](https://stackoverflow.com/questions/8024149/is-it-possible-to-get-the-non-enumerable-inherited-property-names-of-an-object)
 
 ## Question
@@ -92,7 +92,8 @@ function getAllPropertyNames( obj ) {
 
 And to simply get everything..(enum/nonenum, self/inherited.. Please confirm..
 
-```
+
+```javascript
 function getAllPropertyNames( obj ) {
     var props = [];
 
