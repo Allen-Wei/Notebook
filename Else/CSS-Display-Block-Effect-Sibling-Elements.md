@@ -17,7 +17,7 @@
 ```
 
 页面显示效果如下(为了演示在这里给所有的元素都添加了outline样式. 可以直接[在线浏览](http://sandbox.runjs.cn/show/ubmjphtp)或复制文章底部源码自行查看.):
-![p1](../Static/CSS-Display-Block-Effect-Sibling-Elements-1.png)
+![p1](../Resources/CSS-Display-Block-Effect-Sibling-Elements-1.png)
 图1
 
 
@@ -37,7 +37,7 @@
 ```
 
 页面显示如下:
-![p2](../Static/CSS-Display-Block-Effect-Sibling-Elements-2.png)
+![p2](../Resources/CSS-Display-Block-Effect-Sibling-Elements-2.png)
 图2
 
 
@@ -49,7 +49,7 @@
 	<div style="display: inline-block;">Helle world.</div>
 </div>
 ```
-![p3](../Static/CSS-Display-Block-Effect-Sibling-Elements-3.png)
+![p3](../Resources/CSS-Display-Block-Effect-Sibling-Elements-3.png)
 图3
 
 
@@ -64,7 +64,7 @@
 </div>
 ```
 显示效果如下
-![p4](../Static/CSS-Display-Block-Effect-Sibling-Elements-4.png)
+![p4](../Resources/CSS-Display-Block-Effect-Sibling-Elements-4.png)
 
 这个问题之前我也遇到过, 不过通过`float`或者外面再套一层`display:table`, 来矫正这个不在一条水平线上的问题. 可是为什么会导致这样的差异呢? `display`的`block`, `inline-block` 与 `table`, `inline-table` 对元素布局(或者文档流)有哪些影响呢?
 

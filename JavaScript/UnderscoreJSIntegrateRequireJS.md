@@ -1,11 +1,11 @@
-# ½«UnderscoreJS¼¯³Éµ½RequireJS
+# ï¿½ï¿½UnderscoreJSï¿½ï¿½ï¿½Éµï¿½RequireJS
 
-UnderscoreJSÔÚ1.3.0°æ±¾ÖĞÒ»´¦ÁËAMD(RequireJS)µÄÖ§³Ö. ÏÂÃæ½éÉÜÒ»ÖÖ¼ò±ãµÄ·½·¨,ÈÃUnderscoreJSÖ§³ÖRequireJS. ÏÂÃæ½éÉÜµÄÊÇÊ¹ÓÃ [Underscore.js 1.8.3](../Static/underscore-with-requirejs.js) °æ±¾:
+UnderscoreJSï¿½ï¿½1.3.0ï¿½æ±¾ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½AMD(RequireJS)ï¿½ï¿½Ö§ï¿½ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½Ö¼ï¿½ï¿½Ä·ï¿½ï¿½ï¿½,ï¿½ï¿½UnderscoreJSÖ§./Resources/JS. ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Üµï¿½ï¿½ï¿½Ê¹ï¿½ï¿½ [Underscore.js 1.8.3](../Static/underscore-with-requirejs.js) ï¿½æ±¾:
 
-![undersocre-requirejs](../Static/underscore-with-requirejs.png)
+![undersocre-requirejs](../Resources/underscore-with-requirejs.png)
 
-ÉÏÃæµÄºìÉ«È¦×¡µÄ²¿·Ö¾ÍÊÇĞÂÔöµÄÓÃÓÚÖ§³ÖRequrieJSµÄ´úÂë.
+ï¿½ï¿½ï¿½ï¿½Äºï¿½É«È¦×¡ï¿½Ä²ï¿½ï¿½Ö¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö§ï¿½ï¿½RequrieJSï¿½Ä´ï¿½ï¿½ï¿½.
 
-Õâ¸ö·½·¨À´Ô´ÓÚ[GitHub](https://github.com/jashkenas/underscore/commit/0d4b1247c45083c695cab4242c084a97aa600221), ÀïÃæÍ¬Ê±Ö¸³öÁË[Ô´ÂëµÄÎ»ÖÃ](http://underscorejs.org/docs/underscore.html#section-10).
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô´ï¿½ï¿½[GitHub](https://github.com/jashkenas/underscore/commit/0d4b1247c45083c695cab4242c084a97aa600221), ï¿½ï¿½ï¿½ï¿½Í¬Ê±Ö¸ï¿½ï¿½ï¿½ï¿½[Ô´ï¿½ï¿½ï¿½Î»ï¿½ï¿½](http://underscorejs.org/docs/underscore.html#section-10).
 
 
