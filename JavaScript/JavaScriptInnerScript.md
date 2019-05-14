@@ -97,7 +97,7 @@
 
 下面是运行截图:
 
-![JavaScriptInnerScript](https://raw.githubusercontent.com/Allen-Wei/GitBlog/master/JavaScript/JavaScriptInnerScript.png)
+![JavaScriptInnerScript](../Resources/JavaScriptInnerScript.png)
 
 现在在**data-ysd-search-filter**的**{{}}**里面可以写JS表达式了,其实是一个完成的函数body, 因为使用Function.prototype.apply把当前作用域替换成了当前元素, 所以现在表达式的this是当前元素.
 日期使用了easyui的组件, 使用内嵌的表达是最方便的.

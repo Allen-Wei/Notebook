@@ -33,23 +33,23 @@
 右侧是的功能区, 刚才提到的功能都在右侧出现了.
 
 #### 展开DOM, 鼠标放在元素上时, 手机端对应的元素会高亮显示.
-![PC Highlight](https://raw.githubusercontent.com/Allen-Wei/GitBlog/master/Images/vorlonjs-introduction.hover.PNG)
-![WP Hightlight](https://raw.githubusercontent.com/Allen-Wei/GitBlog/master/Images/vorlonjs-introduction.hover.jpg)
+![PC Highlight](../Resources/Images/vorlonjs-introduction.hover.PNG)
+![WP Hightlight](../Resources/Images/vorlonjs-introduction.hover.jpg)
 
 ### 右侧有 `STYLES`, 可以动态修改样式. (将文本颜色修改为 #0094ff)
-![PC Styles](https://raw.githubusercontent.com/Allen-Wei/GitBlog/master/Images/vorlonjs-introduction.modify-styles.PNG)
-![WP Styles](https://raw.githubusercontent.com/Allen-Wei/GitBlog/master/Images/vorlonjs-introduction.modify-styles.jpg)
+![PC Styles](../Resources/Images/vorlonjs-introduction.modify-styles.PNG)
+![WP Styles](../Resources/Images/vorlonjs-introduction.modify-styles.jpg)
 
 #### 可以修改DOM中的文本. (将文本修改为 Hello World.)
-![PC Text](https://raw.githubusercontent.com/Allen-Wei/GitBlog/master/Images/vorlonjs-introduction.modify-text.PNG)
-![WP Text](https://raw.githubusercontent.com/Allen-Wei/GitBlog/master/Images/vorlonjs-introduction.modify-text.jpg)
+![PC Text](../Resources/Images/vorlonjs-introduction.modify-text.PNG)
+![WP Text](../Resources/Images/vorlonjs-introduction.modify-text.jpg)
 
 #### 下面有个 `Interactive Console` 面板, 是用于输入JavaScript, 然后再移动端运行的. (这里在手机端弹一个框.)
-![PC Alert](https://raw.githubusercontent.com/Allen-Wei/GitBlog/master/Images/vorlonjs-introduction.alert.PNG)
-![WP Alert](https://raw.githubusercontent.com/Allen-Wei/GitBlog/master/Images/vorlonjs-introduction.alert.jpg)
+![PC Alert](../Resources/Images/vorlonjs-introduction.alert.PNG)
+![WP Alert](../Resources/Images/vorlonjs-introduction.alert.jpg)
 
 #### 你甚至还可以调用ajax请求然后修改页面. (在控制台输入ajax请求服务器的partial.html并填充到页面底部.)
-![PC Ajax](https://raw.githubusercontent.com/Allen-Wei/GitBlog/master/Images/vorlonjs-introduction.ajax.dom.PNG)
-![WP Ajax](https://raw.githubusercontent.com/Allen-Wei/GitBlog/master/Images/vorlonjs-introduction.ajax.dom.jpg)
+![PC Ajax](../Resources/Images/vorlonjs-introduction.ajax.dom.PNG)
+![WP Ajax](../Resources/Images/vorlonjs-introduction.ajax.dom.jpg)
 
 #### 你也可以右击HTML标签修改.
