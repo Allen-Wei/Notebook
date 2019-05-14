@@ -1,22 +1,22 @@
-# RabbitMQ °²×°
-ÕâÀïÖ÷Òª½éÉÜUbuntuµÄ°²×°, ÆäËûµÄ¾Í×ÔĞĞ¹ÙÍø²éÕÒ°É.
+ï»¿# RabbitMQ å®‰è£…
+è¿™é‡Œä¸»è¦ä»‹ç»Ubuntuçš„å®‰è£…, å…¶ä»–çš„å°±è‡ªè¡Œå®˜ç½‘æŸ¥æ‰¾å§.
 
 ## Ubuntu
 
-ÔÚ°²×°Ò»ÏÂ°üÖ®Ç°, ÏÈ¸üĞÂÒ»ÏÂÔ´:
+åœ¨å®‰è£…ä¸€ä¸‹åŒ…ä¹‹å‰, å…ˆæ›´æ–°ä¸€ä¸‹æº:
 	
 	sudo apt-get update
 
-### °²×° Erlang/OTP
+### å®‰è£… Erlang/OTP
 
 	sudo apt-get install erlang erlang-doc
 
 via: [How to install erlang in Ubuntu 12.04?](http://askubuntu.com/questions/190612/how-to-install-erlang-in-ubuntu-12-04)
 
-### °²×° RabbitMQ Server
+### å®‰è£… RabbitMQ Server
 
 	sudo apt-get install RabbitMQ-Server
 
-ÎÒµÄUbuntuÉÏÖ±½ÓÊ¹ÓÃÕâ¸öÃüÁî¾ÍÄÜ°²×°, Èç¹ûÄãµÄÕÒ²»µ½Õâ¸ö°ü, ¿ÉÒÔ°²×°[¹ÙÍø](http://www.rabbitmq.com/install-debian.html)Ìá¹©µÄ `APT Repository` ·½Ê½°²×°.
+æˆ‘çš„Ubuntuä¸Šç›´æ¥ä½¿ç”¨è¿™ä¸ªå‘½ä»¤å°±èƒ½å®‰è£…, å¦‚æœä½ çš„æ‰¾ä¸åˆ°è¿™ä¸ªåŒ…, å¯ä»¥å®‰è£…[å®˜ç½‘](http://www.rabbitmq.com/install-debian.html)æä¾›çš„ `APT Repository` æ–¹å¼å®‰è£….
 
 So easy!!!

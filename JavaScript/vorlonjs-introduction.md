@@ -1,55 +1,55 @@
-# Vorlonjs ¼ò½é 
+ï»¿# Vorlonjs ç®€ä»‹ 
 
-[¹ÙÍø](http://www.vorlonjs.com)
+[å®˜ç½‘](http://www.vorlonjs.com)
 
-## Ê¹ÓÃ
-Èç¹ûÄãÏëÔÚ±¾µØ×Ô¼º¶¯ÊÖ´î½¨Ò»¸öVorlonJS, ¿ÉÒÔ²Î¿¼¹ÙÍøÌá¹©µÄÎÄµµ. ĞèÒª×¢ÒâÒ»µãµÄÊÇ, °²×° vorlon Ã²ËÆĞèÒªpython»·¾³. 
-µ±È»ÁË×Ô¼º´îÒ»¸öÒª×°Èí¼ş, »¹ÓĞÅäÖÃÍøÂç, Èç¹ûÍêÈ«´ÓÍ·À´ĞèÒªÕÛÌÚÒ»·¬. ÏÖÔÚÄãÖ»ĞèÒªÔÚÄãµÄÍøÒ³ÒıÓÃÒ»¸öÍâ²¿JavaScriptÎÄ¼ş¾Í¿ÉÒÔÁË(ÕâÊÇÎÒÔÚAWSÉÏ´î½¨µÄÒ»¸ö»·¾³), ÈçÏÂ
+## ä½¿ç”¨
+å¦‚æœä½ æƒ³åœ¨æœ¬åœ°è‡ªå·±åŠ¨æ‰‹æ­å»ºä¸€ä¸ªVorlonJS, å¯ä»¥å‚è€ƒå®˜ç½‘æä¾›çš„æ–‡æ¡£. éœ€è¦æ³¨æ„ä¸€ç‚¹çš„æ˜¯, å®‰è£… vorlon è²Œä¼¼éœ€è¦pythonç¯å¢ƒ. 
+å½“ç„¶äº†è‡ªå·±æ­ä¸€ä¸ªè¦è£…è½¯ä»¶, è¿˜æœ‰é…ç½®ç½‘ç»œ, å¦‚æœå®Œå…¨ä»å¤´æ¥éœ€è¦æŠ˜è…¾ä¸€ç•ª. ç°åœ¨ä½ åªéœ€è¦åœ¨ä½ çš„ç½‘é¡µå¼•ç”¨ä¸€ä¸ªå¤–éƒ¨JavaScriptæ–‡ä»¶å°±å¯ä»¥äº†(è¿™æ˜¯æˆ‘åœ¨AWSä¸Šæ­å»ºçš„ä¸€ä¸ªç¯å¢ƒ), å¦‚ä¸‹
 
 	<script src="http://vorlon.alanwei.top/vorlon.js"></script>
 	
-×îºÃ·ÅÔÚÍ·²¿, ¾¡Ôç¼ÓÔØ.
-Ö®ºóÔÚÒÆ¶¯¶Ë´ò¿ªÄãµÄÍøÒ³, ÔÙÔÚPC¶Ë´ò¿ª `http://vorlon.alanwei.top` ¾Í¿ÉÒÔ¿´µ½ÄãµÄÉè±¸ÁË.
+æœ€å¥½æ”¾åœ¨å¤´éƒ¨, å°½æ—©åŠ è½½.
+ä¹‹ååœ¨ç§»åŠ¨ç«¯æ‰“å¼€ä½ çš„ç½‘é¡µ, å†åœ¨PCç«¯æ‰“å¼€ `http://vorlon.alanwei.top` å°±å¯ä»¥çœ‹åˆ°ä½ çš„è®¾å¤‡äº†.
 
-## ÌØĞÔ
-[ÒıÓÃ](http://www.vorlonjs.com/plugins/)
+## ç‰¹æ€§
+[å¼•ç”¨](http://www.vorlonjs.com/plugins/)
 
-1. Console: ÄÜ¹»²é¿´Ó¦ÓÃµÄlogºÍerrors
-2. Modernizr: ²é¿´ÓÃ»§´úÀí(Ò»°ãÖ»ÓÃ»§ä¯ÀÀÆ÷)Ö§³ÖºÍÎ´Ö§³ÖµÄ(HTML/CSS/JavaScript)ÌØĞÔ.
-3. DOM Explorer: ÄÜ¹»Éó²éDOMÊ÷, ²¢ĞŞ¸ÄÑùÊ½ºÍÄÚÈİ.
-4. Object Explorer: ÏÔÊ¾ÕıÔÚ´æ»îµÄJavaScript±äÁ¿Ê÷.
-5. XHR Panel: ²é¿´Éè±¸·¢ËÍµÄAjaxĞÅÏ¢.
-6. ngInspector: Õâ¸öºÍAngularJSÓĞ¹ØµÄĞÅÏ¢.
-7. Network Monitor: ²é¿´ÍøÂç»î¶¯(°üÀ¨XHRºÍ×ÊÔ´ÇëÇó).
-8. Resources Explorer: ×ÊÔ´ä¯ÀÀ, Éó²é±¾µØ×ÊÔ´, ±ÈÈç±¾µØ´æ´¢.
+1. Console: èƒ½å¤ŸæŸ¥çœ‹åº”ç”¨çš„logå’Œerrors
+2. Modernizr: æŸ¥çœ‹ç”¨æˆ·ä»£ç†(ä¸€èˆ¬åªç”¨æˆ·æµè§ˆå™¨)æ”¯æŒå’Œæœªæ”¯æŒçš„(HTML/CSS/JavaScript)ç‰¹æ€§.
+3. DOM Explorer: èƒ½å¤Ÿå®¡æŸ¥DOMæ ‘, å¹¶ä¿®æ”¹æ ·å¼å’Œå†…å®¹.
+4. Object Explorer: æ˜¾ç¤ºæ­£åœ¨å­˜æ´»çš„JavaScriptå˜é‡æ ‘.
+5. XHR Panel: æŸ¥çœ‹è®¾å¤‡å‘é€çš„Ajaxä¿¡æ¯.
+6. ngInspector: è¿™ä¸ªå’ŒAngularJSæœ‰å…³çš„ä¿¡æ¯.
+7. Network Monitor: æŸ¥çœ‹ç½‘ç»œæ´»åŠ¨(åŒ…æ‹¬XHRå’Œèµ„æºè¯·æ±‚).
+8. Resources Explorer: èµ„æºæµè§ˆ, å®¡æŸ¥æœ¬åœ°èµ„æº, æ¯”å¦‚æœ¬åœ°å­˜å‚¨.
 
-ÉÏÊö¾ÍÊÇ VorlonJS ÄÚÖÃÄ¬ÈÏÌá¹©µÄ¼¸¸ö¹¦ÄÜ, ÊÇ²»ÊÇºÍChromeµÈä¯ÀÀÆ÷Ìá¹©µÄ¿ª·¢Õß¹¤¾ßµÄÄ£¿éÒ»Ò»¶ÔÓ¦? ¿´ÆğÀ´ºÜÇ¿´ó, Êµ¼ÊÊµ¼ùÊ±, ÓĞĞ©¹¦ÄÜ²»ÄÇÃ´ºÃÊ¹.
+ä¸Šè¿°å°±æ˜¯ VorlonJS å†…ç½®é»˜è®¤æä¾›çš„å‡ ä¸ªåŠŸèƒ½, æ˜¯ä¸æ˜¯å’ŒChromeç­‰æµè§ˆå™¨æä¾›çš„å¼€å‘è€…å·¥å…·çš„æ¨¡å—ä¸€ä¸€å¯¹åº”? çœ‹èµ·æ¥å¾ˆå¼ºå¤§, å®é™…å®è·µæ—¶, æœ‰äº›åŠŸèƒ½ä¸é‚£ä¹ˆå¥½ä½¿.
 
 
-## ÑİÊ¾
-ÔÚÊÖ»úä¯ÀÀÆ÷ÉÏ´ò¿ª http://vorlondemo.alanwei.top, PCä¯ÀÀÆ÷ÉÏ´ò¿ª http://vorlon.alanwei.top .
-È»ºóÔÚPCä¯ÀÀ×ó²àµÄ `CLIENT LIST` ÖĞÑ¡ÖĞÄãµÄÉè±¸.
+## æ¼”ç¤º
+åœ¨æ‰‹æœºæµè§ˆå™¨ä¸Šæ‰“å¼€ http://vorlondemo.alanwei.top, PCæµè§ˆå™¨ä¸Šæ‰“å¼€ http://vorlon.alanwei.top .
+ç„¶ååœ¨PCæµè§ˆå·¦ä¾§çš„ `CLIENT LIST` ä¸­é€‰ä¸­ä½ çš„è®¾å¤‡.
 
-ÓÒ²àÊÇµÄ¹¦ÄÜÇø, ¸Õ²ÅÌáµ½µÄ¹¦ÄÜ¶¼ÔÚÓÒ²à³öÏÖÁË.
+å³ä¾§æ˜¯çš„åŠŸèƒ½åŒº, åˆšæ‰æåˆ°çš„åŠŸèƒ½éƒ½åœ¨å³ä¾§å‡ºç°äº†.
 
-#### Õ¹¿ªDOM, Êó±ê·ÅÔÚÔªËØÉÏÊ±, ÊÖ»ú¶Ë¶ÔÓ¦µÄÔªËØ»á¸ßÁÁÏÔÊ¾.
+#### å±•å¼€DOM, é¼ æ ‡æ”¾åœ¨å…ƒç´ ä¸Šæ—¶, æ‰‹æœºç«¯å¯¹åº”çš„å…ƒç´ ä¼šé«˜äº®æ˜¾ç¤º.
 ![PC Highlight](https://raw.githubusercontent.com/Allen-Wei/GitBlog/master/Images/vorlonjs-introduction.hover.PNG)
 ![WP Hightlight](https://raw.githubusercontent.com/Allen-Wei/GitBlog/master/Images/vorlonjs-introduction.hover.jpg)
 
-### ÓÒ²àÓĞ `STYLES`, ¿ÉÒÔ¶¯Ì¬ĞŞ¸ÄÑùÊ½. (½«ÎÄ±¾ÑÕÉ«ĞŞ¸ÄÎª #0094ff)
+### å³ä¾§æœ‰ `STYLES`, å¯ä»¥åŠ¨æ€ä¿®æ”¹æ ·å¼. (å°†æ–‡æœ¬é¢œè‰²ä¿®æ”¹ä¸º #0094ff)
 ![PC Styles](https://raw.githubusercontent.com/Allen-Wei/GitBlog/master/Images/vorlonjs-introduction.modify-styles.PNG)
 ![WP Styles](https://raw.githubusercontent.com/Allen-Wei/GitBlog/master/Images/vorlonjs-introduction.modify-styles.jpg)
 
-#### ¿ÉÒÔĞŞ¸ÄDOMÖĞµÄÎÄ±¾. (½«ÎÄ±¾ĞŞ¸ÄÎª Hello World.)
+#### å¯ä»¥ä¿®æ”¹DOMä¸­çš„æ–‡æœ¬. (å°†æ–‡æœ¬ä¿®æ”¹ä¸º Hello World.)
 ![PC Text](https://raw.githubusercontent.com/Allen-Wei/GitBlog/master/Images/vorlonjs-introduction.modify-text.PNG)
 ![WP Text](https://raw.githubusercontent.com/Allen-Wei/GitBlog/master/Images/vorlonjs-introduction.modify-text.jpg)
 
-#### ÏÂÃæÓĞ¸ö `Interactive Console` Ãæ°å, ÊÇÓÃÓÚÊäÈëJavaScript, È»ºóÔÙÒÆ¶¯¶ËÔËĞĞµÄ. (ÕâÀïÔÚÊÖ»ú¶Ëµ¯Ò»¸ö¿ò.)
+#### ä¸‹é¢æœ‰ä¸ª `Interactive Console` é¢æ¿, æ˜¯ç”¨äºè¾“å…¥JavaScript, ç„¶åå†ç§»åŠ¨ç«¯è¿è¡Œçš„. (è¿™é‡Œåœ¨æ‰‹æœºç«¯å¼¹ä¸€ä¸ªæ¡†.)
 ![PC Alert](https://raw.githubusercontent.com/Allen-Wei/GitBlog/master/Images/vorlonjs-introduction.alert.PNG)
 ![WP Alert](https://raw.githubusercontent.com/Allen-Wei/GitBlog/master/Images/vorlonjs-introduction.alert.jpg)
 
-#### ÄãÉõÖÁ»¹¿ÉÒÔµ÷ÓÃajaxÇëÇóÈ»ºóĞŞ¸ÄÒ³Ãæ. (ÔÚ¿ØÖÆÌ¨ÊäÈëajaxÇëÇó·şÎñÆ÷µÄpartial.html²¢Ìî³äµ½Ò³Ãæµ×²¿.)
+#### ä½ ç”šè‡³è¿˜å¯ä»¥è°ƒç”¨ajaxè¯·æ±‚ç„¶åä¿®æ”¹é¡µé¢. (åœ¨æ§åˆ¶å°è¾“å…¥ajaxè¯·æ±‚æœåŠ¡å™¨çš„partial.htmlå¹¶å¡«å……åˆ°é¡µé¢åº•éƒ¨.)
 ![PC Ajax](https://raw.githubusercontent.com/Allen-Wei/GitBlog/master/Images/vorlonjs-introduction.ajax.dom.PNG)
 ![WP Ajax](https://raw.githubusercontent.com/Allen-Wei/GitBlog/master/Images/vorlonjs-introduction.ajax.dom.jpg)
 
-#### ÄãÒ²¿ÉÒÔÓÒ»÷HTML±êÇ©ĞŞ¸Ä.
+#### ä½ ä¹Ÿå¯ä»¥å³å‡»HTMLæ ‡ç­¾ä¿®æ”¹.

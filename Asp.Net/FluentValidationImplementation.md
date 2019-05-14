@@ -1,9 +1,9 @@
-##Fludent Validation Implementation
-×î½ü¿´µ½ÁËÒ»ÖÖ³ÆÎªFluent ValidationµÄÊı¾İÓĞĞ§ĞÔĞ£ÑéµÄÊµ¼ù, ÕâÖÖ·½Ê½µÄÊı¾İĞ£Ñé, ¿´ÆğÀ´¸ü¼ÓÇåÎú, ¶øÇÒ¿ÉÖØÓÃºÜ¸ß. ¼ÇÂ¼ÈçÏÂ.
+ï»¿##Fludent Validation Implementation
+æœ€è¿‘çœ‹åˆ°äº†ä¸€ç§ç§°ä¸ºFluent Validationçš„æ•°æ®æœ‰æ•ˆæ€§æ ¡éªŒçš„å®è·µ, è¿™ç§æ–¹å¼çš„æ•°æ®æ ¡éªŒ, çœ‹èµ·æ¥æ›´åŠ æ¸…æ™°, è€Œä¸”å¯é‡ç”¨å¾ˆé«˜. è®°å½•å¦‚ä¸‹.
 
-### ÊµÏÖÒ»¸ö¼òµ¥µÄFluent·ç¸ñµÄValidation, ÏÂÃæµÄ´úÂëÖ÷ÒªÀ´Ô´ÓÚ [A fluent approach to C# parameter validation](http://blog.getpaint.net/2008/12/06/a-fluent-approach-to-c-parameter-validation/). Ë¼Ïë»¹ÊÇºÜ¼òµ¥µÄ, Ö÷ÒªÓĞÈı¸öclass, ValidateÏàµ±ÓÚÒ»¸ö¹¤³§, Ö÷ÒªÓÃÓÚ·ÖÅäÒ»¸öValidation¶ÔÏó, ValidationÀà°üº¬ÁËĞ£Ñé½á¹ûĞÅÏ¢, ValidationExtension·â×°ÁËĞ£Ñé¹æÔò(ÄÇĞ©À©Õ¹·½·¨).
+### å®ç°ä¸€ä¸ªç®€å•çš„Fluenté£æ ¼çš„Validation, ä¸‹é¢çš„ä»£ç ä¸»è¦æ¥æºäº [A fluent approach to C# parameter validation](http://blog.getpaint.net/2008/12/06/a-fluent-approach-to-c-parameter-validation/). æ€æƒ³è¿˜æ˜¯å¾ˆç®€å•çš„, ä¸»è¦æœ‰ä¸‰ä¸ªclass, Validateç›¸å½“äºä¸€ä¸ªå·¥å‚, ä¸»è¦ç”¨äºåˆ†é…ä¸€ä¸ªValidationå¯¹è±¡, Validationç±»åŒ…å«äº†æ ¡éªŒç»“æœä¿¡æ¯, ValidationExtensionå°è£…äº†æ ¡éªŒè§„åˆ™(é‚£äº›æ‰©å±•æ–¹æ³•).
 
-#### ÊµÏÖ²¿·Ö
+#### å®ç°éƒ¨åˆ†
 
     public class Validate
     {
@@ -109,7 +109,7 @@
 
     }
 	
-#### Ê¹ÓÃ
+#### ä½¿ç”¨
     class Program
     {
         static void Main(string[] args)
@@ -142,13 +142,13 @@
     }
 
 
-ÉÏÃæÖ»ÊÇ¼òµ¥µÄĞ´ÁËÒ»ÏÂÒ»¸öºÜ³£¼ûµÄĞ£Ñé¹æÔò, ×Ô¼º¿ÉÒÔÀ©³ä. ÆäÊµÉÏÃæµÄĞ£ÑéÊÇºÜÈõ, Ó¦¸Ã½áºÏLambda±í´ïÊ½À´ÊµÏÖ¸ü¼ÓÓÅÑÅµÄĞ£Ñé, ±ÈÈçÉÏÃæµÄIsPositive(ÊÇ·ñÊÇ·Ç¸ºÖµ), ÓÅÑÅµÄĞ´·¨Ó¦¸ÃÊÇÕâÑùµÄ
+ä¸Šé¢åªæ˜¯ç®€å•çš„å†™äº†ä¸€ä¸‹ä¸€ä¸ªå¾ˆå¸¸è§çš„æ ¡éªŒè§„åˆ™, è‡ªå·±å¯ä»¥æ‰©å……. å…¶å®ä¸Šé¢çš„æ ¡éªŒæ˜¯å¾ˆå¼±, åº”è¯¥ç»“åˆLambdaè¡¨è¾¾å¼æ¥å®ç°æ›´åŠ ä¼˜é›…çš„æ ¡éªŒ, æ¯”å¦‚ä¸Šé¢çš„IsPositive(æ˜¯å¦æ˜¯éè´Ÿå€¼), ä¼˜é›…çš„å†™æ³•åº”è¯¥æ˜¯è¿™æ ·çš„
 	
 	Validate.Begin().IsPositive<Person>(p => p.Salary, "employee salary")
 
-ÉÏÊöµÄÊµÏÖ»¹ÓĞÒ»¸ö±×¶Ë¾ÍÊÇÎŞ·¨Ö§³Ö¶àÓïÑÔ, ´íÎóÌáÊ¾Ò²²»ÊÇÄÇÃ´ÈİÒ×»ñÈ¡(ĞèÒª´ÓValidation.ExceptionsÖĞ»ñÈ¡). ¸ü½øÒ»²½µÄĞ£Ñé¿ÉÄÜ¾ÍĞèÒªÓÃµ½·´ÉäÁË. ·´ÉäÏà¹ØµÄ½éÉÜÏÂ´ÎÔÙĞ´°É.
+ä¸Šè¿°çš„å®ç°è¿˜æœ‰ä¸€ä¸ªå¼Šç«¯å°±æ˜¯æ— æ³•æ”¯æŒå¤šè¯­è¨€, é”™è¯¯æç¤ºä¹Ÿä¸æ˜¯é‚£ä¹ˆå®¹æ˜“è·å–(éœ€è¦ä»Validation.Exceptionsä¸­è·å–). æ›´è¿›ä¸€æ­¥çš„æ ¡éªŒå¯èƒ½å°±éœ€è¦ç”¨åˆ°åå°„äº†. åå°„ç›¸å…³çš„ä»‹ç»ä¸‹æ¬¡å†å†™å§.
 
-###ÏÂÃæ½éÉÜÒ»¸ö"±ğÈËµÄ"Fluent ValidationÀà¿â.
+###ä¸‹é¢ä»‹ç»ä¸€ä¸ª"åˆ«äººçš„"Fluent Validationç±»åº“.
 
 * (Rules Engine)[http://rulesengine.codeplex.com/]
 * (TNValidate - A Fluent Validation Library for .NET)[http://tnvalidate.codeplex.com/]

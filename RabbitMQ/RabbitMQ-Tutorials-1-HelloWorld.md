@@ -1,52 +1,52 @@
-
-[Ô­ÎÄ](http://www.rabbitmq.com/tutorials/tutorial-one-dotnet.html)
+ï»¿
+[åŽŸæ–‡](http://www.rabbitmq.com/tutorials/tutorial-one-dotnet.html)
 
 # Introduction
 
 
-RabbitMQ ÊÇÒ»¸öÏûÏ¢´úÀí(Ð­ÉÌ·þÎñÆ÷). ±¾ÖÊÉÏ, RabbitMQ´ÓÉú²úÕßÄÇ¶ù½ÓÊÕÒ»¸öÏûÏ¢, È»ºó°ÑÏûÏ¢´«µÝ¸øÏû·ÑÕß. ÔÚÁ½ÕßÖ®¼ä, ¿ÉÒÔ¸ù¾ÝÄãÌá¹©µÄ¹æÔòÂ·ÓÉ, »º´æºÍ³Ö¾Ã»¯ÏûÏ¢.
+RabbitMQ æ˜¯ä¸€ä¸ªæ¶ˆæ¯ä»£ç†(åå•†æœåŠ¡å™¨). æœ¬è´¨ä¸Š, RabbitMQä»Žç”Ÿäº§è€…é‚£å„¿æŽ¥æ”¶ä¸€ä¸ªæ¶ˆæ¯, ç„¶åŽæŠŠæ¶ˆæ¯ä¼ é€’ç»™æ¶ˆè´¹è€…. åœ¨ä¸¤è€…ä¹‹é—´, å¯ä»¥æ ¹æ®ä½ æä¾›çš„è§„åˆ™è·¯ç”±, ç¼“å­˜å’ŒæŒä¹…åŒ–æ¶ˆæ¯.
 
-RabbitMQ, ÓÃÐÐÒµÊõÓï¾ÍÊÇÍ¨ÐÅ.
+RabbitMQ, ç”¨è¡Œä¸šæœ¯è¯­å°±æ˜¯é€šä¿¡.
 
-Éú²úÒâÎ¶×Å·¢ËÍ. Ò»¸ö³ÌÐò·¢ËÍÏûÏ¢¾ÍÊÇÉú²úÕß, ÎÒÃÇÓÃP±íÊ¾:
+ç”Ÿäº§æ„å‘³ç€å‘é€. ä¸€ä¸ªç¨‹åºå‘é€æ¶ˆæ¯å°±æ˜¯ç”Ÿäº§è€…, æˆ‘ä»¬ç”¨Pè¡¨ç¤º:
 
 ![P](http://www.rabbitmq.com/img/tutorials/producer.png)
 
-¶ÓÁÐ¾ÍÊÇÓÐÃû×ÖµÄÓÊÏä, ´æ»îÔÚRabbitMQÀï. ËäÈ»ÏûÏ¢Á÷Í¨¹ýRabbitMQºÍÄãµÄ³ÌÐò, µ«ÊÇÏûÏ¢±»´æ´¢ÔÚ¶ÓÁÐÀïÃæ. ¶ÓÁÐÃ»ÓÐ±»°ó¶¨ÈÎºÎÏÞÖÆ, Äã¿ÉÒÔ´æ´¢Ðí¶àÏûÏ¢ÔÚ¶ÓÁÐÀï. Ëü±¾ÖÊÉÏÊÇÒ»¸öÎÞÏÞµÄ»º´æÇø. ¶à¸öÉú²úÕß¿ÉÒÔ·¢ËÍ¶à¸öÏûÏ¢µ½Ò»¸ö¶ÓÁÐ, ¶à¸öÏû·ÑÕß¿ÉÒÔ´ÓÒ»¸ö¶ÓÁÐ½ÓÊÕÊý¾Ý. ¶ÓÁÐ¿ÉÒÔ±íÊ¾ÈçÏÂ:
+é˜Ÿåˆ—å°±æ˜¯æœ‰åå­—çš„é‚®ç®±, å­˜æ´»åœ¨RabbitMQé‡Œ. è™½ç„¶æ¶ˆæ¯æµé€šè¿‡RabbitMQå’Œä½ çš„ç¨‹åº, ä½†æ˜¯æ¶ˆæ¯è¢«å­˜å‚¨åœ¨é˜Ÿåˆ—é‡Œé¢. é˜Ÿåˆ—æ²¡æœ‰è¢«ç»‘å®šä»»ä½•é™åˆ¶, ä½ å¯ä»¥å­˜å‚¨è®¸å¤šæ¶ˆæ¯åœ¨é˜Ÿåˆ—é‡Œ. å®ƒæœ¬è´¨ä¸Šæ˜¯ä¸€ä¸ªæ— é™çš„ç¼“å­˜åŒº. å¤šä¸ªç”Ÿäº§è€…å¯ä»¥å‘é€å¤šä¸ªæ¶ˆæ¯åˆ°ä¸€ä¸ªé˜Ÿåˆ—, å¤šä¸ªæ¶ˆè´¹è€…å¯ä»¥ä»Žä¸€ä¸ªé˜Ÿåˆ—æŽ¥æ”¶æ•°æ®. é˜Ÿåˆ—å¯ä»¥è¡¨ç¤ºå¦‚ä¸‹:
 
 ![Queue](http://www.rabbitmq.com/img/tutorials/queue.png)
 
-Ïû·Ñ½üËÆÒâÎ¶×Å½ÓÊÕ. Ïû·ÑÕßÊÇÒ»¸ö´ó²¿·ÖÇé¿öÏÂÔÚµÈ´ý½ÓÊÕÏûÏ¢µÄ³ÌÐò. ±íÊ¾ÈçÏÂ:
+æ¶ˆè´¹è¿‘ä¼¼æ„å‘³ç€æŽ¥æ”¶. æ¶ˆè´¹è€…æ˜¯ä¸€ä¸ªå¤§éƒ¨åˆ†æƒ…å†µä¸‹åœ¨ç­‰å¾…æŽ¥æ”¶æ¶ˆæ¯çš„ç¨‹åº. è¡¨ç¤ºå¦‚ä¸‹:
 
 ![Consumer](http://www.rabbitmq.com/img/tutorials/consumer.png)
 
-×¢Òâ, Éú²úÕß, Ïû·ÑÕßºÍ´úÀí²»Ò»¶¨±ØÐëÔÚËÞÖ÷ÔÚÒ»Ì¨»úÆ÷ÉÏ. Êµ¼ÊÉÏ, ´ó²¿·ÖÓ¦ÓÃËûÃÇ¶¼²»ÔÚÒ»Ì¨»úÆ÷ÉÏ.
+æ³¨æ„, ç”Ÿäº§è€…, æ¶ˆè´¹è€…å’Œä»£ç†ä¸ä¸€å®šå¿…é¡»åœ¨å®¿ä¸»åœ¨ä¸€å°æœºå™¨ä¸Š. å®žé™…ä¸Š, å¤§éƒ¨åˆ†åº”ç”¨ä»–ä»¬éƒ½ä¸åœ¨ä¸€å°æœºå™¨ä¸Š.
 
 ## "Hello World"
 (using the .NET/C# Client)
-ÔÚ½Ì³ÌµÄÕâ¸ö²¿·Ö, ÎÒÃÇ½«ÓÃC#Ð´Á½¸ö³ÌÐò. Ò»¸ö·¢ËÍµ¥ÌõÏûÏ¢µÄÉú²úÕß, ºÍ½ÓÊÕ²¢´òÓ¡ÏûÏ¢µÄÏû·ÑÕß. ÎÒÃÇ½«»á×öÒ»Ð©×¢ÊÍ, ÔÚÒ»Ð©¾ßÌåµÄ.NET APIÉÏ.
-ÔÚÏÂÃæµÄÊ¾ÒâÍ¼ÉÏ, "P" ÊÇÎÒÃÇµÄÉú²úÕß, "C"ÊÇÏû·ÑÕß. ÖÐ¼äµÄºÐ×ÓÊÇ¶ÓÁÐ, Ò²¼´ÊÇ»º´æµÄÏûÏ¢:
+åœ¨æ•™ç¨‹çš„è¿™ä¸ªéƒ¨åˆ†, æˆ‘ä»¬å°†ç”¨C#å†™ä¸¤ä¸ªç¨‹åº. ä¸€ä¸ªå‘é€å•æ¡æ¶ˆæ¯çš„ç”Ÿäº§è€…, å’ŒæŽ¥æ”¶å¹¶æ‰“å°æ¶ˆæ¯çš„æ¶ˆè´¹è€…. æˆ‘ä»¬å°†ä¼šåšä¸€äº›æ³¨é‡Š, åœ¨ä¸€äº›å…·ä½“çš„.NET APIä¸Š.
+åœ¨ä¸‹é¢çš„ç¤ºæ„å›¾ä¸Š, "P" æ˜¯æˆ‘ä»¬çš„ç”Ÿäº§è€…, "C"æ˜¯æ¶ˆè´¹è€…. ä¸­é—´çš„ç›’å­æ˜¯é˜Ÿåˆ—, ä¹Ÿå³æ˜¯ç¼“å­˜çš„æ¶ˆæ¯:
 ![P-Q-C](http://www.rabbitmq.com/img/tutorials/python-one.png)
 
 	.NET client library
-	RabbmitMQÖ§³Ö¶àÖÖÐ­Òé. Õâ¸ö½Ì³ÌÊ¹ÓÃµÄÊÇAMQP 0-9-1, Ò»ÖÖ¿ª·ÅµÄ, ¶àÓÃÍ¾µÄÏûÏ¢Ð­Òé. ÓÐ¶à¸öRabbitMQ²»Í¬ÓïÑÔµÄ¿Í»§¶Ë.ÎÒÃÇ½«ÒªÊ¹ÓÃRabbitMQÌá¹©µÄ.NET¿Í»§¶Ë
-	ÏÂÔØ[¿Í»§¶ËÀà¿â](http://www.rabbitmq.com/dotnet.html), ±È¶ÔÇ©Ãû.½âÑ¹²¢¿½±´µ½¹¤×÷Ä¿Â¼.
-	ÄãÐèÒªÈ·±£ÄãµÄÏµÍ³ÄÜ¹»ÕÒµ½C#±àÒë¹¤¾ß `csc.exe`, ÄãÒ²ÐíÐèÒªÌí¼Ó `http://www.rabbitmq.com/dotnet.html`(¸ù¾ÝÄã°²×°µÄ.NET°æ±¾¸Ä±äÂ·¾¶) µ½ÄãµÄPath.
+	RabbmitMQæ”¯æŒå¤šç§åè®®. è¿™ä¸ªæ•™ç¨‹ä½¿ç”¨çš„æ˜¯AMQP 0-9-1, ä¸€ç§å¼€æ”¾çš„, å¤šç”¨é€”çš„æ¶ˆæ¯åè®®. æœ‰å¤šä¸ªRabbitMQä¸åŒè¯­è¨€çš„å®¢æˆ·ç«¯.æˆ‘ä»¬å°†è¦ä½¿ç”¨RabbitMQæä¾›çš„.NETå®¢æˆ·ç«¯
+	ä¸‹è½½[å®¢æˆ·ç«¯ç±»åº“](http://www.rabbitmq.com/dotnet.html), æ¯”å¯¹ç­¾å.è§£åŽ‹å¹¶æ‹·è´åˆ°å·¥ä½œç›®å½•.
+	ä½ éœ€è¦ç¡®ä¿ä½ çš„ç³»ç»Ÿèƒ½å¤Ÿæ‰¾åˆ°C#ç¼–è¯‘å·¥å…· `csc.exe`, ä½ ä¹Ÿè®¸éœ€è¦æ·»åŠ  `http://www.rabbitmq.com/dotnet.html`(æ ¹æ®ä½ å®‰è£…çš„.NETç‰ˆæœ¬æ”¹å˜è·¯å¾„) åˆ°ä½ çš„Path.
 
-ÏÖÔÚÎÒÃÇÓÐÁË.NET¿Í»§¶ËÀà¿â, ÎÒÃÇ¿ÉÒÔÐ´Ò»ÏÂ´úÂë
+çŽ°åœ¨æˆ‘ä»¬æœ‰äº†.NETå®¢æˆ·ç«¯ç±»åº“, æˆ‘ä»¬å¯ä»¥å†™ä¸€ä¸‹ä»£ç 
 
 ## Sending
 
 ![sending](http://www.rabbitmq.com/img/tutorials/sending.png)
-ÎÒÃÇ½«»áµ÷ÓÃÎÒÃÇµÄÏûÏ¢·¢ËÍÕß `Send.cs` ºÍÎÒÃÇµÄÏûÏ¢½ÓÊÕÕß `Receive.cs`. ·¢ËÍÕß½«»áÁ¬½Ó RabbitMQ, ·¢ËÍÒ»ÌõÏûÏ¢, È»ºóÍË³ö.
+æˆ‘ä»¬å°†ä¼šè°ƒç”¨æˆ‘ä»¬çš„æ¶ˆæ¯å‘é€è€… `Send.cs` å’Œæˆ‘ä»¬çš„æ¶ˆæ¯æŽ¥æ”¶è€… `Receive.cs`. å‘é€è€…å°†ä¼šè¿žæŽ¥ RabbitMQ, å‘é€ä¸€æ¡æ¶ˆæ¯, ç„¶åŽé€€å‡º.
 
-ÔÚ `Send.cs` Àï, ÎÒÃÇÐèÒªÊ¹ÓÃÈçÏÂÃüÃû¿Õ¼ä:
+åœ¨ `Send.cs` é‡Œ, æˆ‘ä»¬éœ€è¦ä½¿ç”¨å¦‚ä¸‹å‘½åç©ºé—´:
 
 	using System;
 	using RabbitMQ.Client;
 	using System.Text;	
 
-ÉèÖÃÀà:
+è®¾ç½®ç±»:
 
 	class Send
 	{
@@ -56,7 +56,7 @@ RabbitMQ, ÓÃÐÐÒµÊõÓï¾ÍÊÇÍ¨ÐÅ.
 		}
 	}
 
-È»ºóÎÒÃÇ¿ÉÒÔ´´½¨Ò»¸öÁ¬½Óµ½·þÎñÆ÷:
+ç„¶åŽæˆ‘ä»¬å¯ä»¥åˆ›å»ºä¸€ä¸ªè¿žæŽ¥åˆ°æœåŠ¡å™¨:
 
 	class Send
 	{
@@ -73,9 +73,9 @@ RabbitMQ, ÓÃÐÐÒµÊõÓï¾ÍÊÇÍ¨ÐÅ.
 		}
 	}
 
-connectionÁ¬½Ó³éÏóÁËsocketÁ¬½Ó, ÎªÎÒÃÇÌá¹©ÁËÐ­Òé°æ±¾Ð­ÉÌºÍÈÏÖ¤µÈµÈ. ÕâÀïÎÒÃÇÁ¬½Óµ½±¾»úµÄ´úÀí - *localhost*. Èç¹ûÎÒÃÇÏëÁ¬½ÓÆäËû»úÆ÷ÉÏµÄ´úÀí, Ö»ÐèÒªÔÚ´Ë´¦Ö¸¶¨ËûµÄÃû×Ö»òIPµØÖ·.
-½ÓÏÂÀ´ÎÒÃÇ´´½¨channel(ÐÅµÀ), ÕâÊÇ´ó²¿·ÖAPI»ñÈ¡ÐÅÏ¢µÄµØ·½.
-ÎÒÃÇÒªÎªÎÒÃÇµÄ·¢ËÍÉùÃ÷Ò»¸ö¶ÓÁÐ, È»ºóÎÒÃÇ¾Í¿ÉÒÔ·¢²¼ÏûÏ¢µ½Õâ¸ö¶ÓÁÐ:
+connectionè¿žæŽ¥æŠ½è±¡äº†socketè¿žæŽ¥, ä¸ºæˆ‘ä»¬æä¾›äº†åè®®ç‰ˆæœ¬åå•†å’Œè®¤è¯ç­‰ç­‰. è¿™é‡Œæˆ‘ä»¬è¿žæŽ¥åˆ°æœ¬æœºçš„ä»£ç† - *localhost*. å¦‚æžœæˆ‘ä»¬æƒ³è¿žæŽ¥å…¶ä»–æœºå™¨ä¸Šçš„ä»£ç†, åªéœ€è¦åœ¨æ­¤å¤„æŒ‡å®šä»–çš„åå­—æˆ–IPåœ°å€.
+æŽ¥ä¸‹æ¥æˆ‘ä»¬åˆ›å»ºchannel(ä¿¡é“), è¿™æ˜¯å¤§éƒ¨åˆ†APIèŽ·å–ä¿¡æ¯çš„åœ°æ–¹.
+æˆ‘ä»¬è¦ä¸ºæˆ‘ä»¬çš„å‘é€å£°æ˜Žä¸€ä¸ªé˜Ÿåˆ—, ç„¶åŽæˆ‘ä»¬å°±å¯ä»¥å‘å¸ƒæ¶ˆæ¯åˆ°è¿™ä¸ªé˜Ÿåˆ—:
 
 
 	using System;
@@ -112,25 +112,25 @@ connectionÁ¬½Ó³éÏóÁËsocketÁ¬½Ó, ÎªÎÒÃÇÌá¹©ÁËÐ­Òé°æ±¾Ð­ÉÌºÍÈÏÖ¤µÈµÈ. ÕâÀïÎÒÃÇÁ¬½Ó
 	}
 
 
-ÉùÃ÷¶ÓÁÐÊÇÃÝµÈµÄ, ¶ÓÁÐ½ö½öÔÚËü²»´æÔÚµÄÊ±ºò²Å±»´´½¨.(Alan: Èç¹û¶ÓÁÐAÒÑ¾­±»ÉùÃ÷¹ý, ÔÙ´ÎÉùÃ÷¶ÓÁÐA, Ö»ÊÇ¼òµ¥µØ·µ»Ø¶ÓÁÐA, ²¢²»»áÔÙ´´½¨Ò»´Î¶ÓÁÐA. Èç¹ûÁ½´ÎÉùÃ÷µÄ¶ÓÁÐAµÄÃû×ÖÏàÍ¬, ÆäËû²ÎÊý²»Í¬, ÄÇÃ´µÚ¶þ´ÎµÄ¶ÓÁÐÉùÃ÷»áÅ×Òì³£.)ÏûÏ¢ÄÚÈÝÊÇ×Ö½ÚÊý×é, ËùÒÔÄã¿ÉÒÔ±àÂëÈÎºÎÄãÏë·¢ËÍµÄ¶«Î÷.
-µ±ÉÏÃæµÄ´úÂë½áÊøÔËÐÐ, channelÐÅµÀºÍÁ¬½Ó¶¼»á±»»ØÊÕ.
-[ÕâÊÇÍêÕûµÄSend.csÀà](http://github.com/rabbitmq/rabbitmq-tutorials/blob/master/dotnet/Send.cs)
+å£°æ˜Žé˜Ÿåˆ—æ˜¯å¹‚ç­‰çš„, é˜Ÿåˆ—ä»…ä»…åœ¨å®ƒä¸å­˜åœ¨çš„æ—¶å€™æ‰è¢«åˆ›å»º.(Alan: å¦‚æžœé˜Ÿåˆ—Aå·²ç»è¢«å£°æ˜Žè¿‡, å†æ¬¡å£°æ˜Žé˜Ÿåˆ—A, åªæ˜¯ç®€å•åœ°è¿”å›žé˜Ÿåˆ—A, å¹¶ä¸ä¼šå†åˆ›å»ºä¸€æ¬¡é˜Ÿåˆ—A. å¦‚æžœä¸¤æ¬¡å£°æ˜Žçš„é˜Ÿåˆ—Açš„åå­—ç›¸åŒ, å…¶ä»–å‚æ•°ä¸åŒ, é‚£ä¹ˆç¬¬äºŒæ¬¡çš„é˜Ÿåˆ—å£°æ˜Žä¼šæŠ›å¼‚å¸¸.)æ¶ˆæ¯å†…å®¹æ˜¯å­—èŠ‚æ•°ç»„, æ‰€ä»¥ä½ å¯ä»¥ç¼–ç ä»»ä½•ä½ æƒ³å‘é€çš„ä¸œè¥¿.
+å½“ä¸Šé¢çš„ä»£ç ç»“æŸè¿è¡Œ, channelä¿¡é“å’Œè¿žæŽ¥éƒ½ä¼šè¢«å›žæ”¶.
+[è¿™æ˜¯å®Œæ•´çš„Send.csç±»](http://github.com/rabbitmq/rabbitmq-tutorials/blob/master/dotnet/Send.cs)
 
-·¢ËÍÎÞ·¨Õý³£Ö´ÐÐ!
-Èç¹ûÄãÊÇµÚÒ»´ÎÊ¹ÓÃRabbitMQ, ¶øÇÒ¿´²»µ½ÏûÏ¢ "Sent", Äã×¥ÆÆÍ·Æ¤Ò²Ïë²»³öÄÄÀï³öÁËÎÊÌâ. Ò²ÐíÊÇ´úÀíÃ»ÓÐ×ã¹»µÄ´ÅÅÌ¿Õ¼ä¿ªÊ¼Ö´ÐÐ(Ä¬ÈÏRabbitMQÐèÒªÖÁÉÙ50MBµÄ¿Õ¼ä), Òò´ËRabbitMQ¾Ü¾ø½ÓÊÕÏûÏ¢. ¼ì²é´úÀíÈÕÖ¾ÎÄ¼þ, Èç¹û±ØÒª, È·ÈÏºÍ½µµÍÏÞÖÆ. [ÅäÖÃÎÄ¼þÎÄµµ](http://www.rabbitmq.com/configure.html#config-items)¸æËßÄãÈç¹ûÉèÖÃ `disk_free_limit`.
+å‘é€æ— æ³•æ­£å¸¸æ‰§è¡Œ!
+å¦‚æžœä½ æ˜¯ç¬¬ä¸€æ¬¡ä½¿ç”¨RabbitMQ, è€Œä¸”çœ‹ä¸åˆ°æ¶ˆæ¯ "Sent", ä½ æŠ“ç ´å¤´çš®ä¹Ÿæƒ³ä¸å‡ºå“ªé‡Œå‡ºäº†é—®é¢˜. ä¹Ÿè®¸æ˜¯ä»£ç†æ²¡æœ‰è¶³å¤Ÿçš„ç£ç›˜ç©ºé—´å¼€å§‹æ‰§è¡Œ(é»˜è®¤RabbitMQéœ€è¦è‡³å°‘50MBçš„ç©ºé—´), å› æ­¤RabbitMQæ‹’ç»æŽ¥æ”¶æ¶ˆæ¯. æ£€æŸ¥ä»£ç†æ—¥å¿—æ–‡ä»¶, å¦‚æžœå¿…è¦, ç¡®è®¤å’Œé™ä½Žé™åˆ¶. [é…ç½®æ–‡ä»¶æ–‡æ¡£](http://www.rabbitmq.com/configure.html#config-items)å‘Šè¯‰ä½ å¦‚æžœè®¾ç½® `disk_free_limit`.
 
 ## Receiving
 
-ÒÔÉÏ¾ÍÊÇÎÒÃÇµÄ·¢ËÍÕß¡£ÎÒÃÇµÄ½ÓÊÜÕß´ÓRabbitMQ½ÓÊÕÏûÏ¢£¬ËùÒÔ²»Ïñ·¢²¼Ò»ÌõÏûÏ¢µÄ·¢ËÍÕß£¬ÎÒÃÇÐèÒª±£³Ö½ÓÊÕÕß³ÖÐøÔËÐÐ½ÓÊÕÏûÏ¢²¢´òÓ¡³öÀ´¡£
+ä»¥ä¸Šå°±æ˜¯æˆ‘ä»¬çš„å‘é€è€…ã€‚æˆ‘ä»¬çš„æŽ¥å—è€…ä»ŽRabbitMQæŽ¥æ”¶æ¶ˆæ¯ï¼Œæ‰€ä»¥ä¸åƒå‘å¸ƒä¸€æ¡æ¶ˆæ¯çš„å‘é€è€…ï¼Œæˆ‘ä»¬éœ€è¦ä¿æŒæŽ¥æ”¶è€…æŒç»­è¿è¡ŒæŽ¥æ”¶æ¶ˆæ¯å¹¶æ‰“å°å‡ºæ¥ã€‚
 
-receive.csÀïµÄusingÓï¾ä¼¸ºõºÍsend.csÒ»Ñù£º
+receive.csé‡Œçš„usingè¯­å¥å‡ ä¹Žå’Œsend.csä¸€æ ·ï¼š
 
 	using RabbitMQ.Client;
 	using RabbitMQ.Client.Events;
 	using System;
 	using System.Text;
 
- °ÑËüÉèÖÃµÄºÓ·¢ËÍÕßÒ»Ñù£»ÎÒÃÇ´ò¿ªÒ»¸öÁ¬½ÓºÍÍ¨µÀ£¬ÉùÃ÷Ò»¸öÎÒÃÇ½«ÒªÏû·ÑµÄ¶ÓÁÐ¡£×¢ÒâÕâÀïÕâ¸ö¶ÓÁÐÐèÒªºÍsend³ÌÐòÀïµÄÆ¥Åä¡£
+ æŠŠå®ƒè®¾ç½®çš„æ²³å‘é€è€…ä¸€æ ·ï¼›æˆ‘ä»¬æ‰“å¼€ä¸€ä¸ªè¿žæŽ¥å’Œé€šé“ï¼Œå£°æ˜Žä¸€ä¸ªæˆ‘ä»¬å°†è¦æ¶ˆè´¹çš„é˜Ÿåˆ—ã€‚æ³¨æ„è¿™é‡Œè¿™ä¸ªé˜Ÿåˆ—éœ€è¦å’Œsendç¨‹åºé‡Œçš„åŒ¹é…ã€‚
 
 	class Receive
 	{
@@ -152,9 +152,9 @@ receive.csÀïµÄusingÓï¾ä¼¸ºõºÍsend.csÒ»Ñù£º
 		}
 	}
 
-×¢ÒâÎÒÃÇÔÚÕâÀïÒ²ÉùÃ÷ÁËÄÇ¸ö¶ÓÁÐ¡£ÒòÎªÎÒÃÇÒ²ÐíÏÈÓÚ·¢ËÍÕß³ÌÐòÆô¶¯½ÓÊÜÕß³ÌÐò¡£
+æ³¨æ„æˆ‘ä»¬åœ¨è¿™é‡Œä¹Ÿå£°æ˜Žäº†é‚£ä¸ªé˜Ÿåˆ—ã€‚å› ä¸ºæˆ‘ä»¬ä¹Ÿè®¸å…ˆäºŽå‘é€è€…ç¨‹åºå¯åŠ¨æŽ¥å—è€…ç¨‹åºã€‚
 
-ÎÒÃÇ½«»á¸æËß·þÎñÆ÷´ÓÄÇ¸ö¶ÓÁÐµÝËÍÏûÏ¢¸øÎÒÃÇÒòÎª·þÎñÆ÷»áÒì²½¸øÎÒÃÇÍÆËÍÏûÏ¢£¬ËùÒÔÎÒÃÇÐèÒª°®Ìá¹©»Øµ÷¡£Õâ¾ÍÊÇEventingBasicConsumer.ReceivedÊÂ¼þËùÒª´¦ÀíµÄ¡£
+æˆ‘ä»¬å°†ä¼šå‘Šè¯‰æœåŠ¡å™¨ä»Žé‚£ä¸ªé˜Ÿåˆ—é€’é€æ¶ˆæ¯ç»™æˆ‘ä»¬å› ä¸ºæœåŠ¡å™¨ä¼šå¼‚æ­¥ç»™æˆ‘ä»¬æŽ¨é€æ¶ˆæ¯ï¼Œæ‰€ä»¥æˆ‘ä»¬éœ€è¦çˆ±æä¾›å›žè°ƒã€‚è¿™å°±æ˜¯EventingBasicConsumer.Receivedäº‹ä»¶æ‰€è¦å¤„ç†çš„ã€‚
 
 	using RabbitMQ.Client;
 	using RabbitMQ.Client.Events;
@@ -192,27 +192,27 @@ receive.csÀïµÄusingÓï¾ä¼¸ºõºÍsend.csÒ»Ñù£º
 		}
 	}
 
-[Receive.cs Ô´Âë](https://github.com/rabbitmq/rabbitmq-tutorials/blob/master/dotnet/Receive.cs)
+[Receive.cs æºç ](https://github.com/rabbitmq/rabbitmq-tutorials/blob/master/dotnet/Receive.cs)
 
 
 ## Putting It All Together
 
-Äã¿ÉÒÔÒýÓÃRabbitMQ .NET¿âÍ¬Ê±±àÒëËüÃÇÁ½¸ö. ÎÒÃÇÊ¹ÓÃÃüÁîÐÐ(cmd.exeºÍcsc)±àÒëºÍÔËÐÐ´úÂë¡£ÁíÍâÄãÒ²¿ÉÒÔÊ¹ÓÃVS¡£
+ä½ å¯ä»¥å¼•ç”¨RabbitMQ .NETåº“åŒæ—¶ç¼–è¯‘å®ƒä»¬ä¸¤ä¸ª. æˆ‘ä»¬ä½¿ç”¨å‘½ä»¤è¡Œ(cmd.exeå’Œcsc)ç¼–è¯‘å’Œè¿è¡Œä»£ç ã€‚å¦å¤–ä½ ä¹Ÿå¯ä»¥ä½¿ç”¨VSã€‚
 
 	$ csc /r:"RabbitMQ.Client.dll" Send.cs
 	$ csc /r:"RabbitMQ.Client.dll" Receive.cs
 
-È»ºóÔËÐÐ¿ÉÖ´ÐÐ³ÌÐò:
+ç„¶åŽè¿è¡Œå¯æ‰§è¡Œç¨‹åº:
 
 	$ Send.exe
 
-È»ºóÔËÐÐ½ÓÊÕÕß: 
+ç„¶åŽè¿è¡ŒæŽ¥æ”¶è€…: 
 	
 	$ Receive.exe
 
-½ÓÊÕÕß½«»á´òÓ¡À´×ÔRabbitMQ·¢ËÍÕßµÄÏûÏ¢¡£½ÓÊÕÕß½«»á±£³ÖÔËÐÐ£¬µÈ´ýÏûÏ¢£¨Ê¹ÓÃCtrl+CÍ£Ö¹£©£¬ËùÒÔÊÔ×Å´ÓÁíÒ»¸öÖÕ¶ËÔËÐÐ·¢ËÍÕß¡£
+æŽ¥æ”¶è€…å°†ä¼šæ‰“å°æ¥è‡ªRabbitMQå‘é€è€…çš„æ¶ˆæ¯ã€‚æŽ¥æ”¶è€…å°†ä¼šä¿æŒè¿è¡Œï¼Œç­‰å¾…æ¶ˆæ¯ï¼ˆä½¿ç”¨Ctrl+Cåœæ­¢ï¼‰ï¼Œæ‰€ä»¥è¯•ç€ä»Žå¦ä¸€ä¸ªç»ˆç«¯è¿è¡Œå‘é€è€…ã€‚
 
-Èç¹ûÄãÏë¼ì²é¶ÓÁÐ£¬¿ÉÒÔ³¢ÊÔÊ¹ÓÃ `RabbitMQctl list_queues`.
+å¦‚æžœä½ æƒ³æ£€æŸ¥é˜Ÿåˆ—ï¼Œå¯ä»¥å°è¯•ä½¿ç”¨ `RabbitMQctl list_queues`.
 
-ÊÇÊ±ºòÒÆ²½µÚ¶þ¸ö½Ì³Ì½¨Á¢¼òµ¥¹¤×÷¶ÓÁÐÁË.
+æ˜¯æ—¶å€™ç§»æ­¥ç¬¬äºŒä¸ªæ•™ç¨‹å»ºç«‹ç®€å•å·¥ä½œé˜Ÿåˆ—äº†.
 

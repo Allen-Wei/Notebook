@@ -1,21 +1,21 @@
-## LocalDB Ê¹ÓÃ½éÉÜ
+ï»¿## LocalDB ä½¿ç”¨ä»‹ç»
 
-Ä¬ÈÏÇé¿öÏÂ, °²×°Visual StudioµÄÊ±ºò¾Í»á°üº¬SQL Server LocalDBµÄ×é¼ş, Ä¬ÈÏÊÇ°²×°µÄ. Èç¹ûÃ»ÓĞ, Äã¿ÉÒÔµ½Î¢Èí¹ÙÍø[ÏÂÔØ°²×°](http://www.microsoft.com/en-us/download/details.aspx?id=42299). 
+é»˜è®¤æƒ…å†µä¸‹, å®‰è£…Visual Studioçš„æ—¶å€™å°±ä¼šåŒ…å«SQL Server LocalDBçš„ç»„ä»¶, é»˜è®¤æ˜¯å®‰è£…çš„. å¦‚æœæ²¡æœ‰, ä½ å¯ä»¥åˆ°å¾®è½¯å®˜ç½‘[ä¸‹è½½å®‰è£…](http://www.microsoft.com/en-us/download/details.aspx?id=42299). 
 
-## Ê¹ÓÃ
-ÇĞ»»µ½ C:\Program Files\Microsoft SQL Server Ä¿Â¼, È»ºó´ò¿ª×îºóÒ»¸öÄ¿Â¼, ÎÒµÄÊÇ`120`, È»ºóÕÒµ½ `Tools\Binn\SqlLocalDB.exe`, ´ò¿ªDOS, µ÷ÓÃÕâ¸öÎÄ¼ş.
-´´½¨ÊµÀı:
+## ä½¿ç”¨
+åˆ‡æ¢åˆ° C:\Program Files\Microsoft SQL Server ç›®å½•, ç„¶åæ‰“å¼€æœ€åä¸€ä¸ªç›®å½•, æˆ‘çš„æ˜¯`120`, ç„¶åæ‰¾åˆ° `Tools\Binn\SqlLocalDB.exe`, æ‰“å¼€DOS, è°ƒç”¨è¿™ä¸ªæ–‡ä»¶.
+åˆ›å»ºå®ä¾‹:
 
 	SqlLocalDB.exe create MyInstanceName
 
-ÔËĞĞÊµÀı:
+è¿è¡Œå®ä¾‹:
 
 	SqlLocalDB.exe start MyInstanceName
 
-²é¿´ÊµÀıÔËĞĞ×´Ì¬:
+æŸ¥çœ‹å®ä¾‹è¿è¡ŒçŠ¶æ€:
 
 	SqlLocalDB.exe info MyInstanceName
 
-Á¬½ÓÊµÀı: Ê¹ÓÃVSµÄSQL Server¹¤¾ßÁ¬½ÓÊ±, ÊµÀıµÄÈ«³ÆÊÇ`(localdb)\MyInstanceName`, [Ïà¹Ø×ÊÁÏ](http://stackoverflow.com/questions/26977106/visual-studio-2013-does-not-create-sql-server-2014-localdb-database), ¶ø±àÂëÊ±, Êı¾İ¿âÁ¬½Ó×Ö·û´®¾ÍÀàËÆÓÚ `Data Source=(localdb)\MyInstanceName;Initial Catalog=Temporary;Integrated Security=True;`, [Ïà¹Ø×ÊÁÏ](https://connectionstrings.com/sql-server/).
+è¿æ¥å®ä¾‹: ä½¿ç”¨VSçš„SQL Serverå·¥å…·è¿æ¥æ—¶, å®ä¾‹çš„å…¨ç§°æ˜¯`(localdb)\MyInstanceName`, [ç›¸å…³èµ„æ–™](http://stackoverflow.com/questions/26977106/visual-studio-2013-does-not-create-sql-server-2014-localdb-database), è€Œç¼–ç æ—¶, æ•°æ®åº“è¿æ¥å­—ç¬¦ä¸²å°±ç±»ä¼¼äº `Data Source=(localdb)\MyInstanceName;Initial Catalog=Temporary;Integrated Security=True;`, [ç›¸å…³èµ„æ–™](https://connectionstrings.com/sql-server/).
 
-LocalDBÓÃÓÚ²âÊÔ¿ª·¢»¹ÊÇºÜ·½±ãµÄ.
+LocalDBç”¨äºæµ‹è¯•å¼€å‘è¿˜æ˜¯å¾ˆæ–¹ä¾¿çš„.

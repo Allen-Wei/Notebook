@@ -1,24 +1,24 @@
-##Ç°ÑÔ
-ÕâÁ½ÌìÔÚÐ´¶¯Ì¬²éÑ¯, Ç°¶ËÒª°Ñ²éÑ¯±í´ïÊ½Æ´½ÓºÃ´«µ½ºó¶Ë, ºóÀ´Ð´ÁËÒ»´óÛç´úÂëÖ®ºó·¢ÏÖ²»¹»Áé»î, Í»È»ÏëÆðÀ´AngularJSµÄÄÚÇ¶±í´ïÊ½ÁË, AngularÔÊÐíÄã°ÑJS±í´ïÊ½°ó¶¨µ½ÔªËØÉÏÇóÖµ, ±ÈÈç 
+ï»¿##å‰è¨€
+è¿™ä¸¤å¤©åœ¨å†™åŠ¨æ€æŸ¥è¯¢, å‰ç«¯è¦æŠŠæŸ¥è¯¢è¡¨è¾¾å¼æ‹¼æŽ¥å¥½ä¼ åˆ°åŽç«¯, åŽæ¥å†™äº†ä¸€å¤§å¨ä»£ç ä¹‹åŽå‘çŽ°ä¸å¤Ÿçµæ´», çªç„¶æƒ³èµ·æ¥AngularJSçš„å†…åµŒè¡¨è¾¾å¼äº†, Angularå…è®¸ä½ æŠŠJSè¡¨è¾¾å¼ç»‘å®šåˆ°å…ƒç´ ä¸Šæ±‚å€¼, æ¯”å¦‚ 
 
 	<ul>
 		<li ng-repeat="item in items">
-			Price:¡¡{{item.price}},
+			Price:ã€€{{item.price}},
 			Count: {{item.count}},
 			Sub Price: {{item.price * item.count}}
 		</li>
 	</ul>
 
-ÉÏÃæ´úÂëµÄ{{item.price * item.count}}¾ÍÊÇÒ»¸öJS±í´ïÊ½, AngularÄÜ°ïÄãÇóÖµ. ÕâÊÇÒòÎªAngular×Ô¼ºÊµÏÖÁËÒª¸øAST [Abstract Syntax Tree](http://jointjs.com/demos/javascript-ast), Ò»ÖÖJSµ½JSµÄparser, ¿ÉÊÇÊµÏÖÕâ¸ö¿É²»ÊÇÒ»°ãÈËÄÜÍê³ÉµÄ, ¾ÍÊÇÒ»¸ö½âÊÍÆ÷.
-ÒÔÇ°¿´µ½¹ýËµKnockout, avalonÊ¹ÓÃµÄÊÇeval»òÕß new FunctionÀ´×öµÄ. ½ñÌìÌØµØÊÔÁËÒ»ÏÂ.
+ä¸Šé¢ä»£ç çš„{{item.price * item.count}}å°±æ˜¯ä¸€ä¸ªJSè¡¨è¾¾å¼, Angularèƒ½å¸®ä½ æ±‚å€¼. è¿™æ˜¯å› ä¸ºAngularè‡ªå·±å®žçŽ°äº†è¦ç»™AST [Abstract Syntax Tree](http://jointjs.com/demos/javascript-ast), ä¸€ç§JSåˆ°JSçš„parser, å¯æ˜¯å®žçŽ°è¿™ä¸ªå¯ä¸æ˜¯ä¸€èˆ¬äººèƒ½å®Œæˆçš„, å°±æ˜¯ä¸€ä¸ªè§£é‡Šå™¨.
+ä»¥å‰çœ‹åˆ°è¿‡è¯´Knockout, avalonä½¿ç”¨çš„æ˜¯evalæˆ–è€… new Functionæ¥åšçš„. ä»Šå¤©ç‰¹åœ°è¯•äº†ä¸€ä¸‹.
 
-ÎÒÒª»ñÈ¡µÄ²éÑ¯±í´ïÊ½´ó¸ÅÊÇÕâ¸öÑù×ÓµÄ 
+æˆ‘è¦èŽ·å–çš„æŸ¥è¯¢è¡¨è¾¾å¼å¤§æ¦‚æ˜¯è¿™ä¸ªæ ·å­çš„ 
 	
 	UserName.Contains(@0) and Birthday > @1
 
-È»ºó@0ºÍ@1·Ö±ð¶ÔÓ¦²ÎÊýÊý×éµÄÖµ.
+ç„¶åŽ@0å’Œ@1åˆ†åˆ«å¯¹åº”å‚æ•°æ•°ç»„çš„å€¼.
 
-ÏÂÃæÊÇÎÒ´úÂëµÄÊµÏÖ²¿·Ö:
+ä¸‹é¢æ˜¯æˆ‘ä»£ç çš„å®žçŽ°éƒ¨åˆ†:
 	
 	 getFilters: function (userOpt) {
             var defOpt = {
@@ -61,18 +61,18 @@
         }
 
 
-È»ºóÊ¹ÓÃµÄÊ±ºò´ó¸ÅÊÇÕâ¸öÑù×ÓµÄ:
+ç„¶åŽä½¿ç”¨çš„æ—¶å€™å¤§æ¦‚æ˜¯è¿™ä¸ªæ ·å­çš„:
 
 	<div id="toolbar-search">
-        Éú³ÉÈÕÆÚ ¿ªÊ¼: <input class="easyui-datebox ysd-search ysd-search-startdate" data-ysd-search-filter="GenerateDate > {{return Ysd.Services.Utils.ifIsInvalidDate(new Date($(this).datebox('getValue')), undefined)}}" style="width:100px">
-        Éú³ÉÈÕÆÚ ½áÊø: <input class="easyui-datebox ysd-search ysd-search-enddate" data-ysd-search-filter="GenerateDate < {{return Ysd.Services.Utils.ifIsInvalidDate(new Date($(this).datebox('getValue')), undefined)}}" style="width:100px">
-        Ãû×Ö: <input type="text" class="ysd-search ysd-search-name" data-ysd-search-filter="UserName.Contains($value)" style="width: 80px;" />
-        ÊÖ»úºÅ£º <input type="text" class="ysd-search ysd-search-phone" data-ysd-search-filter="Mobile.Contains($value)" style="width: 80px;" />
-        ´û¿î¶î¶È´óÓÚ: <input type="text" class="ysd-search ysd-search-loanlimit" data-ysd-search-filter="LoanLimit.Value > {{return parseInt($(this).val())}}" style="width: 80px;"  /> 
+        ç”Ÿæˆæ—¥æœŸ å¼€å§‹: <input class="easyui-datebox ysd-search ysd-search-startdate" data-ysd-search-filter="GenerateDate > {{return Ysd.Services.Utils.ifIsInvalidDate(new Date($(this).datebox('getValue')), undefined)}}" style="width:100px">
+        ç”Ÿæˆæ—¥æœŸ ç»“æŸ: <input class="easyui-datebox ysd-search ysd-search-enddate" data-ysd-search-filter="GenerateDate < {{return Ysd.Services.Utils.ifIsInvalidDate(new Date($(this).datebox('getValue')), undefined)}}" style="width:100px">
+        åå­—: <input type="text" class="ysd-search ysd-search-name" data-ysd-search-filter="UserName.Contains($value)" style="width: 80px;" />
+        æ‰‹æœºå·ï¼š <input type="text" class="ysd-search ysd-search-phone" data-ysd-search-filter="Mobile.Contains($value)" style="width: 80px;" />
+        è´·æ¬¾é¢åº¦å¤§äºŽ: <input type="text" class="ysd-search ysd-search-loanlimit" data-ysd-search-filter="LoanLimit.Value > {{return parseInt($(this).val())}}" style="width: 80px;"  /> 
         <a href="#" class="easyui-linkbutton ysd-form-search" iconcls="icon-search">Search</a>
     </div>
 
-ÏÂÃæÊÇÅÐ¶ÏÊÇ·ñÊÇÎÞÐ§ÈÕÆÚµÄÏà¹Øº¯Êý
+ä¸‹é¢æ˜¯åˆ¤æ–­æ˜¯å¦æ˜¯æ— æ•ˆæ—¥æœŸçš„ç›¸å…³å‡½æ•°
 	
 	    isDate: function (date) {
             if (Object.prototype.toString.call(date) === "[object Date]") {
@@ -95,14 +95,14 @@
             return this.isInvalidDate(date) ? whenTrue : date;
         }
 
-ÏÂÃæÊÇÔËÐÐ½ØÍ¼:
+ä¸‹é¢æ˜¯è¿è¡Œæˆªå›¾:
 
 ![JavaScriptInnerScript](https://raw.githubusercontent.com/Allen-Wei/GitBlog/master/JavaScript/JavaScriptInnerScript.png)
 
-ÏÖÔÚÔÚ**data-ysd-search-filter**µÄ**{{}}**ÀïÃæ¿ÉÒÔÐ´JS±í´ïÊ½ÁË,ÆäÊµÊÇÒ»¸öÍê³ÉµÄº¯Êýbody, ÒòÎªÊ¹ÓÃFunction.prototype.apply°Ñµ±Ç°×÷ÓÃÓòÌæ»»³ÉÁËµ±Ç°ÔªËØ, ËùÒÔÏÖÔÚ±í´ïÊ½µÄthisÊÇµ±Ç°ÔªËØ.
-ÈÕÆÚÊ¹ÓÃÁËeasyuiµÄ×é¼þ, Ê¹ÓÃÄÚÇ¶µÄ±í´ïÊÇ×î·½±ãµÄ.
-ÊµÏÖ¶¯Ì¬½âÎöJS±í´ïÊ½µÄÖ÷ÒªÀûÓÃÁË [new Function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function) ºÍ [Function.prototype.apply](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply).
-Èç¹ûÊ¹ÓÃÒ»°ãµÄ»ñÈ¡·½Ê½¿ÉÄÜ¾ÍÒªÐ´Ò»´óÛç»ñÈ¡Öµ²¢×ª»»µÄ´úÂëÁË, ÎÞ·¨³éÏó³öÒ»¸ö¹«¹²·½·¨:
+çŽ°åœ¨åœ¨**data-ysd-search-filter**çš„**{{}}**é‡Œé¢å¯ä»¥å†™JSè¡¨è¾¾å¼äº†,å…¶å®žæ˜¯ä¸€ä¸ªå®Œæˆçš„å‡½æ•°body, å› ä¸ºä½¿ç”¨Function.prototype.applyæŠŠå½“å‰ä½œç”¨åŸŸæ›¿æ¢æˆäº†å½“å‰å…ƒç´ , æ‰€ä»¥çŽ°åœ¨è¡¨è¾¾å¼çš„thisæ˜¯å½“å‰å…ƒç´ .
+æ—¥æœŸä½¿ç”¨äº†easyuiçš„ç»„ä»¶, ä½¿ç”¨å†…åµŒçš„è¡¨è¾¾æ˜¯æœ€æ–¹ä¾¿çš„.
+å®žçŽ°åŠ¨æ€è§£æžJSè¡¨è¾¾å¼çš„ä¸»è¦åˆ©ç”¨äº† [new Function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function) å’Œ [Function.prototype.apply](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply).
+å¦‚æžœä½¿ç”¨ä¸€èˆ¬çš„èŽ·å–æ–¹å¼å¯èƒ½å°±è¦å†™ä¸€å¤§å¨èŽ·å–å€¼å¹¶è½¬æ¢çš„ä»£ç äº†, æ— æ³•æŠ½è±¡å‡ºä¸€ä¸ªå…¬å…±æ–¹æ³•:
 
 	var startDate = Ysd.Services.Utils.ifIsInvlidDate(new Date($(".ysd-search-startdate").datebox("getValue")), undefined);
 	filters.push("GenerateDate > @0");
@@ -113,4 +113,4 @@
 	...
 	....
 
-ÏÖÔÚµÈÓÚ°ÑÕâÐ©»ñÈ¡ÖµµÄ·½·¨ÒÆµ½HTMLÀïÃæÁË, È»ºó¾ÍÄÜÅúÁ¿»ñÈ¡²Ù×÷ÁË. ¶à·½±ã~
+çŽ°åœ¨ç­‰äºŽæŠŠè¿™äº›èŽ·å–å€¼çš„æ–¹æ³•ç§»åˆ°HTMLé‡Œé¢äº†, ç„¶åŽå°±èƒ½æ‰¹é‡èŽ·å–æ“ä½œäº†. å¤šæ–¹ä¾¿~

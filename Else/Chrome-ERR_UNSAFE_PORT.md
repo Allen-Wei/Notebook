@@ -1,16 +1,16 @@
-
+ï»¿
 Question: 
-Ê¹ÓÃChrome´ò¿ª `http://my-server-address:87` Ê±, Chrome»áÌáÊ¾ÀàËÆÓÚÈçÏÂµÄ´íÎó:
+ä½¿ç”¨Chromeæ‰“å¼€ `http://my-server-address:87` æ—¶, Chromeä¼šæç¤ºç±»ä¼¼äºå¦‚ä¸‹çš„é”™è¯¯:
 `Error 312 (net::ERR_UNSAFE_PORT): Unknown error.`
 
 Answer: 
-ÓÒ»÷Chrome=>Properties, È»ºóÔÚ¿ì½İ·½Ê½Àï×·¼Ó `--explicitly-allowed-ports=xxx`.
-±ÈÈç
+å³å‡»Chrome=>Properties, ç„¶ååœ¨å¿«æ·æ–¹å¼é‡Œè¿½åŠ  `--explicitly-allowed-ports=xxx`.
+æ¯”å¦‚
 `C:\Documents and Settings\User\Local Settings\Application Data\Google\Chrome\Application\chrome.exe --explicitly-allowed-ports=6666`
 
-×ÊÁÏÀ´Ô´: [Google](http://www.google.com/support/forum/p/Chrome/thread?tid=7512620ef6d830c3&hl=en)
+èµ„æ–™æ¥æº: [Google](http://www.google.com/support/forum/p/Chrome/thread?tid=7512620ef6d830c3&hl=en)
 
-ÎÊÌâ´ğ°¸Õª×Ô: [StackOverflow](http://superuser.com/questions/188006/how-to-fix-err-unsafe-port-error-on-chrome-when-browsing-to-unsafe-ports)
+é—®é¢˜ç­”æ¡ˆæ‘˜è‡ª: [StackOverflow](http://superuser.com/questions/188006/how-to-fix-err-unsafe-port-error-on-chrome-when-browsing-to-unsafe-ports)
 
 Note: 
 
@@ -84,7 +84,7 @@ Answer:
 * 6668, // Alternate IRC [Apple addition]
 * 6669, // Alternate IRC [Apple addition]
 
-Ò²¾ÍÊÇËµChrome¿¼ÂÇµ½°²È«ĞÔ, ÒÔÉÏ¶Ë¿ÚºÅChrome×öÁËÒ»Ğ©ÏŞÖÆ, ¾Í³öÏÖÁËÉÏÃæµÄÇé¿ö.
+ä¹Ÿå°±æ˜¯è¯´Chromeè€ƒè™‘åˆ°å®‰å…¨æ€§, ä»¥ä¸Šç«¯å£å·Chromeåšäº†ä¸€äº›é™åˆ¶, å°±å‡ºç°äº†ä¸Šé¢çš„æƒ…å†µ.
 
-×ÊÁÏÀ´Ô´: [StackOverflow](http://superuser.com/questions/188058/which-ports-are-considered-unsafe-on-chrome)
-Ô´Âë: [Chromium](https://src.chromium.org/viewvc/chrome/trunk/src/net/base/net_util.cc?view=markup)
+èµ„æ–™æ¥æº: [StackOverflow](http://superuser.com/questions/188058/which-ports-are-considered-unsafe-on-chrome)
+æºç : [Chromium](https://src.chromium.org/viewvc/chrome/trunk/src/net/base/net_util.cc?view=markup)
