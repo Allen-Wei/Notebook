@@ -30,13 +30,31 @@
     "editor.renderIndentGuides": true,
     "files.eol": "\n",
     "files.encoding": "utf8",
-         "vim.normalModeKeyBindings": [
+    "vim.normalModeKeyBindings": [
         {
             "before": [ "z", "a" ],
             "after": [ "<Esc>", "0", "f", "(", "l", "y", "t", ";", "0", "f", "(", "a", "`", "`", "<Esc>", "h", "p", "x", "a", ",", "<Esc>" ]
         }
-    ]
-}   
+    ],
+    "editor.minimap.enabled": false,
+    "explorer.confirmDelete": false,
+    "explorer.openEditors.visible": 0,
+    "editor.cursorBlinking": "phase",
+    "editor.smoothScrolling": true,
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": [
+                    "entity.name.function",
+                    "support.function"
+                ],
+                "settings": {
+                    "fontStyle": "italic bold"
+                }
+            }
+        ]
+    }
+}
 ```
 
 #vsc #visual studio code
