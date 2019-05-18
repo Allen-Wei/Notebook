@@ -24,6 +24,7 @@
 * 首行加入 `#!/usr/bin/env dotnet-script`, 并把脚本文件更改为可执行文件, 可以直接执行.
 * `#r "nuget: Newtonsoft.Json, 12.0.2"` 引用nuget包
 * `#load "nuget:simple-targets-csx, 6.0.0"` 引用nuget上的脚本包
+* `#load "./other-script.csx"` 引用其他脚本文件
 
 来源 [filipw/dotnet-script](https://github.com/filipw/dotnet-script/blob/master/README.md)
 
