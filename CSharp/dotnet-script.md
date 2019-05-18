@@ -59,9 +59,9 @@ You can invoke the tool using the following command: dotnet-script
 Tool 'dotnet-script' (version '0.29.1') was successfully installed.
 ```
 
-> `/Users/alan` 是我的用户目录, 安装完成后为了方便使用 `dotnet-script` 命令, 你可以把目录`/Users/alan/.dotnet/tools`添加到环境变量`PATH`中, 或者使用`ln -s /Users/alan/.dotnet/tools/dotnet-script /usr/local/bin/dotnet-script`添加到现有的`PATH`目录中.
-
 这种方式的好处是你可跨平台使用相同的命令安装 `dotnet-script`.
+
+> `/Users/alan` 是我的用户目录, 安装完成后为了方便使用 `dotnet-script` 命令, 你可以把目录`/Users/alan/.dotnet/tools`添加到环境变量`PATH`中, 或者使用`ln -s /Users/alan/.dotnet/tools/dotnet-script /usr/local/bin/dotnet-script`添加到现有的`PATH`目录中.
 
 > 使用 .Net CLI 安装完 `dotnet-script` 后, 需要检查是否添加了`DOTNET_ROOT`环境变量, 否则执行`dotnet-script`后会报以下错误: 
 > ```bash
