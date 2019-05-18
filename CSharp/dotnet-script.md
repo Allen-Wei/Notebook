@@ -1,5 +1,30 @@
 # dotnet script
 
+## 总结
+
+```shell
+> dotnet tool install -g dotnet-script  # 安装 dotnet-script
+> dotnet script --help # 显示帮助文档
+> dotnet script init # 创建脚手架脚本
+> dotnet script # 进入 REPL 模式
+> dotnet script hello.csx -i # 执行脚本 hell.csx 后进入 REPL 模式
+> dotnet script hello.csx # 执行脚本 hello.csx
+> dotnet script -d hello.csx # 以debug模式执行脚本 hello.csx
+> dotnet script -d hello.csx -- arg1 arg2 # 以debug模式执行脚本 hello.csx, 并传入两个参数: arg1, arg2. 脚本内部使用全局变量 Args 接收参数.
+> dotnet script hello.csx -s https://SomePackageSource1 -s https://SomePackageSource2 # 执行脚本时指定多个Nuget包源地址
+> dotnet script https://tinyurl.com/y8cda9zt # 执行远程脚本
+> ls -al | dotnet script UpperCase.csx # 接收管道输入
+> dotnet script exec path_to_dll -- arg1 arg2 # 执行 dll 文件, 并传入两个参数: arg1, arg2.
+> dotnet script publish main.csx -o publish_dir -c Release # 编译脚本为独立可执行程序
+```
+
+
+脚本内指令:
+
+* 首行加入 `#!/usr/bin/env dotnet-script`, 并把脚本文件更改为可执行文件, 可以直接执行.
+* `#r "nuget: Newtonsoft.Json, 12.0.2"` 引用nuget包
+* `#load "nuget:simple-targets-csx, 6.0.0"` 引用nuget上的脚本包
+
 来源 [filipw/dotnet-script](https://github.com/filipw/dotnet-script/blob/master/README.md)
 
 使用.Net CLI运行C#脚本, 使用VS Code编辑脚本并引用Nuget包. 所有OmniSharp支持的语言都支持这些特性.
