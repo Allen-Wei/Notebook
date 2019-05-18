@@ -12,7 +12,7 @@
 > dotnet script -d hello.csx # 以debug模式执行脚本 hello.csx
 > dotnet script -d hello.csx -- arg1 arg2 # 以debug模式执行脚本 hello.csx, 并传入两个参数: arg1, arg2. 脚本内部使用全局变量 Args 接收参数.
 > dotnet script hello.csx -s https://SomePackageSource1 -s https://SomePackageSource2 # 执行脚本时指定多个Nuget包源地址
-> dotnet script https://tinyurl.com/y8cda9zt # 执行远程脚本
+> dotnet script https://dwz.cn/xpsKTaoi # 执行远程脚本
 > ls -al | dotnet script UpperCase.csx # 接收管道输入
 > dotnet script exec path_to_dll -- arg1 arg2 # 执行 dll 文件, 并传入两个参数: arg1, arg2.
 > dotnet script publish main.csx -o publish_dir -c Release # 编译脚本为独立可执行程序
