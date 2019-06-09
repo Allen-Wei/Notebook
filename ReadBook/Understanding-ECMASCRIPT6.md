@@ -1,4 +1,17 @@
-## 第一章块级作用域绑定
+# Understanding ECMAScript 6
+
+> VSC Vim Keyboard Map: 
+
+```json
+{
+    "vim.normalModeKeyBindings": [
+        { "before":["z", "b"], "after":["<Esc>", "a", "`", "`", "<Esc>", "i"] },
+        { "before":["z", "c"], "after":["<Esc>", "o", "<Enter>", "`", "`", "`", "j", "a", "v", "a", "s", "c", "r", "i", "p", "t", "<Enter>", "`", "`", "`", "<Esc>", "O"] }
+    ]
+}
+```
+
+## 第一章 块级作用域绑定
 
 ### 临时死区 Temporal Dead Zone
 
@@ -23,7 +36,7 @@ if(condition){
 
 `typeof`是在声明变量`value`的代码块外执行的, 此时`value`并不在TDZ中. 这也就意味着不存在`value`这个绑定, `typeof`操作最终返回`undefined`. TDZ 只是块级绑定的特色之一.
 
-## 第二章字符串和正则表达式
+## 第二章 字符串和正则表达式
 
 ### codePointAt, String.fromCOdePoint
 
@@ -173,3 +186,122 @@ getFlags(/ab/g) // g
 ```
 
 在ES6中, 新增了一个属性`flags`属性, 返回正则表达式的修饰符.
+
+### 标签模版
+
+```javascript
+function myTag(literals, ...substitutions): String{
+    /**
+     * 原生字符串信息同样被传入模版标签, 标签函数的第一个参数 literals 是个数组
+     * 它有一个额外的属性 raw , 是一个包含每一个字面值的原生等价信息的数组. 效果类似于ES6新增的 String.raw 标签函数
+     */ 
+}
+
+let count = 10,
+    price = 0.25;
+
+let message = myTag`${count} items cost $${(count * price).toFixed(2)}.`;
+```
+
+其中`literals`参数是一个数组, 包含以下元素:
+
+* 第1个占位符前的空字符串(`""`)
+* 第1、2个占位符之间的字符串(`" items cost $"`)
+* 第2个占位符后的字符串(`"."`)
+
+
+`substitutions`参数包含了两个元素: 
+
+* 第1个是变量`count`的解释值: 10
+* 第2个是`(count * price).toFixed(2)`的解释值: 2.50
+
+`literals`第一个元素一定是个字符串, 在上面的例子里是个空字符串, 而`literals[literals.length - 1]`总是字符串结尾. 所以`substitutions`的数量总比`literals`少一个.
+
+
+## 函数
+
+### 明确函数的多重用途
+
+JavaScript函数有两个不同的内部方法: `[[Call]]`和`[[Construct]]`. 当通过`new`关键字调用函数时, 执行的是`[[Construct]]`函数, 它负责创建一个通常被称作实例的新对象, 然后再执行函数体, 将`this`绑定到实例上; 如果不通过`new`关键字调用函数, 则执行`[[Call]]`函数, 从而直接执行代码中的函数体, 具有`[[Construct]]`方法的函数被统称为构造函数. 不是所有的函数都有`[[Construct]]`方法, 比如箭头函数, 因此不是所有的函数都可以通过`new`调用.
+
+### 在ES5中判断函数被调用的方法
+
+在ES5中如果想确定一个函数是通过`new`关键字被调用的(或者说判断函数是否被作为构造函数被调用), 最流行的方式是使用`instanceof`: 
+
+```javascript
+function Person(name){
+    if (this instanceof Person){
+        this.name = name;
+    } else {
+        throw new Error("必须使用new关键字调用Person");
+    }
+}
+```
+
+但是这种方法不完全可靠, 因为有一种不依赖`new`关键字的方法也可以将`this`绑定到`Person`实例上:
+
+```javascript
+let person = new Person("Alan");
+let notAPerson = Person.call(person, "Allen"); //借助call方法就绕过了上面的 instanceof 检测
+```
+
+为了解决这个问题, ES6 引入了 `new.target` 这个元属性(指非对象的属性), 当调用函数的`[[Construct]]`方法时, `new.target` 被赋值为`new`操作符的目标, 通常是新创建的对象实例, 也就是函数体内`this`的构造函数, 如果调用`[[Call]]`方法, 则`new.target`的值为`underfined`. 更安全的判断逻辑如下:
+
+```javascript
+function Person(name){
+    if (typeof this.target !== "undefined"){
+        this.name = name;
+    } else {
+        throw new Error("必须使用new关键字调用Person");
+    }
+}
+```
+
+### 箭头函数
+
+* 没有 `this`, `super`, `arguments` 和 `new.target` 绑定
+* 不能使用 `new` 关键字调用
+* 没有原型
+* 不可以改变`this`绑定
+* 不支持`arguments`对象
+* 不支持重复的命名参数
+
+
+## 第四章 扩展对象的功能性
+
+### 可计算属性名
+
+在ES5及早期版本的对象是李忠, 如果想通过计算得到属性名, 需要用方括号代替点记法: 
+
+```javascript
+var person = {},
+    lastName = "last name";
+
+person[lastName] = "Wei";
+```
+
+但是在ES5中无法为一个对象字面量定义该属性的, 而在ES6中可在对象字面量中使用可计算属性名称: 
+
+```javascript
+let lastName = "last name";
+let person = {
+    [lastName]: "Wei",
+    [lastName + " suffix"]: "test" //同样可食用表达式作为属性的可计算名称
+};
+```
+
+### 新增方法
+
+#### Object.is()方法
+
+对于新增的`Object.is()`方法来说, 其运行结果在大部分情况下与`===`运算符相同, 唯一的区别在于`+0`和`-0`被识别为不相等并且`NaN`与`NaN`等价:
+
+```javascript
++0 == -0            // true
++0 === -0           // true
+Object.is(+0, -0)   //false
+
+NaN == NaN          // false
+NaN === NaN         // false
+Object.is(NaN, NaN) // true
+```
