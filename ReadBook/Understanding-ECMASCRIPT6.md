@@ -27,7 +27,6 @@ if(condition){
 
 ### codePointAt, String.fromCOdePoint
 
-//String.fromCodePoint(134071);
 在UTF-16中, 前2^16个码位均以16位的编码单元表示, 这个范围被称作*基于多文种平面(BMP, Basic Multilingual Plane)*. 超出这个范围的码位则要归属于某个辅助平面(*supplementary plane*), 其中的码位仅用16位就无法表示了. 为此UTF-16引入了*代理对(surrogate pair)*, 其规定用两个16位编码单元表示一个码位. 也就是说, 字符串里的字符有两种, 一种是由一个编码单元16表示的BMP字符, 另一种是由两个编码单元32位表示的辅助平面字符.
 
 在ECMAScript 5中, 所有字符串的操作都基于16位编码单元. 如果采用同样的方式处理包含代理对的UTF-16编码字符, 得到的结果可能与预期不符, 就像这样: 
