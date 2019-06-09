@@ -173,4 +173,4 @@ function getFlagss(reg){
 getFlags(/ab/g) // g
 ```
 
-在ES6中, 新增了一个属性`flags`属性, 返回正则表达式的修饰符
+在ES6中, 新增了一个属性`flags`属性, 返回正则表达式的修饰符.
