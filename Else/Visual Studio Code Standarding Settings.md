@@ -4,13 +4,13 @@
 
 ```json
 [{
-    "key": "ctrl+alt+shift+w",
+    "key": "alt+shift+w",
     "command": "workbench.action.closeOtherEditors"
 }, {
-    "key": "ctrl+left",
+    "key": "ctrl+alt+left",
     "command": "workbench.action.navigateBack"
 }, {
-    "key": "ctrl+right",
+    "key": "ctrl+alt+right",
     "command": "workbench.action.navigateForward"
 }]
 ```
