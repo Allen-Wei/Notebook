@@ -12,6 +12,15 @@
 }, {
     "key": "ctrl+alt+right",
     "command": "workbench.action.navigateForward"
+}, {
+    "key": "ctrl+alt+shift+m",
+    "command": "workbench.action.terminal.sendSequence",
+    "args": {
+        "text": "git status\u000D"
+    }
+}, {
+    "key": "ctrl+alt+r",
+    "command": "workbench.action.editorLayoutTwoRows"
 }]
 ```
 
