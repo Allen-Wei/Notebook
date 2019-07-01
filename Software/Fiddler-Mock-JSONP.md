@@ -4,7 +4,7 @@
 ```cs
 public static void OnBeforeResponse(Session oSession)
 {
-    if(oSession.url.IndexOf("/rcm/RelativeRecommend/seriesrecommend") != -1){
+    if(oSession.url.IndexOf("your url path") != -1){
         oSession.utilDecodeResponse();
         string method = "";
         int startIndex = oSession.url.IndexOf("&callback=");
