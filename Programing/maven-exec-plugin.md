@@ -10,13 +10,15 @@ ref
 mvn help:describe -Dplugin=exec -Dfull
 ```
 
-## Command Line 命令行执行
+## 使用
+
+使用命令行执行
 
 ```bash
 mvn exec:java -Dexec.mainClass="net.alanwei.App" -Dexec.args="arg1 arg2"
 ```
 
-## pom.xml 配置
+或者配置 pom.xml 然后执行`mvn exec`:
 
 ```xml
 <build>
