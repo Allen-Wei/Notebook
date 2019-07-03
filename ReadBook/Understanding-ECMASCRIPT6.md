@@ -286,7 +286,7 @@ person[lastName] = "Wei";
 let lastName = "last name";
 let person = {
     [lastName]: "Wei",
-    [lastName + " suffix"]: "test" //同样可食用表达式作为属性的可计算名称
+    [lastName + " suffix"]: "test" //同样可使用表达式作为属性的可计算名称
 };
 ```
 
@@ -299,7 +299,7 @@ let person = {
 ```javascript
 +0 == -0            // true
 +0 === -0           // true
-Object.is(+0, -0)   //false
+Object.is(+0, -0)   // false
 
 NaN == NaN          // false
 NaN === NaN         // false
