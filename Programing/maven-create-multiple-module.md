@@ -2,6 +2,8 @@
 
 如何使用命令行创建带有多个子模块的Maven项目
 
+Ref: [how-to-create-maven-multi-module-using-command-line](https://www.javaguides.net/2018/06/how-to-create-maven-multi-module-using-command-line.html)
+
 In this guide, we learn how to create __Maven Multi-Module__ using Command Line with very easy steps. A multi-module project is defined by a parent POM referencing one or more sub-modules. In this example, we will create a blogger web application with different modules. Let's create a blogger as parent project and it's 3 sub-modules are blogger-core, blogger-common, blogger-web.
 
 Real-world examples of maven multi-module projects are:
