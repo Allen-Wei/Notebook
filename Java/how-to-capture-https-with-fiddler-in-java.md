@@ -21,12 +21,21 @@ Enter a password when prompted. This should create a file called FiddlerKeystore
 
 Now start the JVM with Fiddler as the proxy and this keystore as the truststore. You'll need these vmargs:
 
-	-DproxySet=true
-	-DproxyHost=127.0.0.1
-	-DproxyPort=8888
-	-Djavax.net.ssl.trustStore=<path\to\FiddlerKeystore>
-	-Djavax.net.ssl.trustStorePassword=<Keystore Password>
+```
+-DproxySet=true
+-DproxyHost=127.0.0.1
+-DproxyPort=8888
+-Djavax.net.ssl.trustStore=<path\to\FiddlerKeystore>
+-Djavax.net.ssl.trustStorePassword=<Keystore Password>
+```
 
 Use these vmargs in your eclipse run configuration and you should be good to go.
 
 I'm able to capture HTTPS requests made from the JVM without any issues with this setup.
+
+
+* `-Djava.net.useSystemProxies=true` 使用系统代理
+* `-Dhttp.proxyHost=127.0.0.1` Http代理地址
+* `-Dhttp.proxyPort=8888` Http代理端口号
+* `-Dhttps.proxyHost=127.0.0.1` Https代理地址
+* `-Dhttps.proxyPort=8888` Https代理端口号
