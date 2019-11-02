@@ -28,21 +28,48 @@
 
 ```json
 {
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "vim.useCtrlKeys": false,
     "editor.largeFileOptimizations": true,
     "breadcrumbs.enabled": true,
     "editor.renderControlCharacters": true,
-    "editor.lineNumbers": "relative",    
+    "editor.lineNumbers": "relative",
     "window.closeWhenEmpty": true,
-    "window.restoreWindows": "all",    
-    "editor.renderWhitespace":"all",
+    "window.restoreWindows": "all",
+    "editor.renderWhitespace": "all",
     "editor.renderIndentGuides": true,
     "files.eol": "\n",
     "files.encoding": "utf8",
     "vim.normalModeKeyBindings": [
         {
-            "before": [ "z", "a" ],
-            "after": [ "<Esc>", "0", "f", "(", "l", "y", "t", ";", "0", "f", "(", "a", "`", "`", "<Esc>", "h", "p", "x", "a", ",", "<Esc>" ]
+            "before": [
+                "z",
+                "a"
+            ],
+            "after": [
+                "<Esc>",
+                "0",
+                "f",
+                "(",
+                "l",
+                "y",
+                "t",
+                ";",
+                "0",
+                "f",
+                "(",
+                "a",
+                "`",
+                "`",
+                "<Esc>",
+                "h",
+                "p",
+                "x",
+                "a",
+                ",",
+                "<Esc>"
+            ]
         }
     ],
     "editor.minimap.enabled": false,
@@ -62,6 +89,25 @@
                 }
             }
         ]
+    },
+    "java.configuration.checkProjectSettingsExclusions": false,
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "terminal.integrated.rendererType": "dom",
+    "terminal.integrated.shell.windows": "C:\\Program Files\\PowerShell\\6\\pwsh.exe",
+    "window.zoomLevel": 0,
+    "html.format.wrapLineLength": 0,
+    "editor.fontLigatures": true,
+    "editor.fontFamily": "'Cascadia Code', Consolas, 'Courier New', monospace",
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
     }
 }
 ```
