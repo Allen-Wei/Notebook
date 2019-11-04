@@ -1,4 +1,5 @@
 filetype plugin on
+set rnu
 set nu
 set nocompatible
 set noswapfile
