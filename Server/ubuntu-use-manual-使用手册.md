@@ -29,7 +29,7 @@ apt-get install ibus-rime # 输入法: https://github.com/rime/home/wiki/RimeWit
 
 * __PrtSc__ – 获取整个屏幕的截图并保存到 Pictures 目录。
 * __Shift + PrtSc__ – 获取屏幕的某个区域截图并保存到 Pictures 目录。
-* __Alt + PrtSc__ –获取当前窗口的截图并保存到 Pictures 目录。
+* __Alt + PrtSc__ – 获取当前窗口的截图并保存到 Pictures 目录。
 * __Ctrl + PrtSc__ – 获取整个屏幕的截图并存放到剪贴板。
 * __Shift + Ctrl + PrtSc__ – 获取屏幕的某个区域截图并存放到剪贴板。
 * __Ctrl + Alt + PrtSc__ – 获取当前窗口的 截图并存放到剪贴板。
@@ -58,3 +58,7 @@ Gnome3 系用户，可以按 `ctrl + shift + alt + r`，屏幕右下角有红点
 ```sh
 git clone git@github.com:alanwei43/docker-nginx.git # 获取nginx, 用于反向代理
 ```
+
+## 其他
+
+* [Windows 远程控制](https://www.digitalcitizen.life/enabling-remote-desktop-connections-windows-7)
