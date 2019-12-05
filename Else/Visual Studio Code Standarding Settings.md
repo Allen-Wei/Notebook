@@ -108,6 +108,13 @@
     "editor.fontFamily": "'Cascadia Code', Consolas, 'Courier New', monospace",
     "[jsonc]": {
         "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "files.watcherExclude": {
+        "**/.git/objects/**": true,
+        "**/.git/subtree-cache/**": true,
+        "**/node_modules/**": true,
+        ".vscode": true,
+        ".gitlab": true
     }
 }
 ```
