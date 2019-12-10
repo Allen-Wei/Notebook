@@ -3,25 +3,31 @@
 ## keybindings.json
 
 ```json
-[{
+[
+  {
     "key": "alt+shift+w",
     "command": "workbench.action.closeOtherEditors"
-}, {
-    "key": "ctrl+alt+left",
+  },
+  {
+    "key": "alt+left",
     "command": "workbench.action.navigateBack"
-}, {
-    "key": "ctrl+alt+right",
+  },
+  {
+    "key": "alt+right",
     "command": "workbench.action.navigateForward"
-}, {
-    "key": "ctrl+alt+shift+m",
+  },
+  {
+    "key": "alt+shift+m",
     "command": "workbench.action.terminal.sendSequence",
     "args": {
-        "text": "git status\u000D"
+      "text": "git status\u000D"
     }
-}, {
-    "key": "ctrl+alt+r",
+  },
+  {
+    "key": "shift+alt+r",
     "command": "workbench.action.editorLayoutTwoRows"
-}]
+  }
+]
 ```
 
 ## settings.json
@@ -115,7 +121,8 @@
         "**/node_modules/**": true,
         ".vscode": true,
         ".gitlab": true
-    }
+    },
+    "extensions.autoUpdate": false,
 }
 ```
 
