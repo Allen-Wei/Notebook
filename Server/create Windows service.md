@@ -19,10 +19,15 @@ c:\srvany\instsrv.exe "frpc" c:\srvany\srvany.exe
 
 ## 更改注册表
 
-打开注册表, 定位到 `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\frpc`, 然后新建一个名为 `Parameters` 的 Key( _Edit > New > Key_), 然后右击这个Key, 新建一个名为`Application`的 __String Value__, 双击这个Key, 值输入要执行的程序(比如: `C:\frp_0.29.1_windows_amd64\frpc.exe -c C:\frp_0.29.1_windows_amd64\frpc.ini`)
+打开注册表, 定位到 `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\frpc`, 然后新建一个名为 `Parameters` 的 Key( _Edit > New > Key_), 然后右击这个Key, 新建一个名为`Application`的 __String Value__, 双击这个Key, 值输入要执行的程序(比如: `"C:\frp_0.29.1_windows_amd64\frpc.exe" -c "C:\frp_0.29.1_windows_amd64\frpc.ini"`)
 
 ## 启动
 
-```dos
-sc start "frpc"
+```bash
+sc start "frpc" #启动服务
+sc delete "frcp" #删除服务
 ```
+
+## 设置Windows启动自动登陆:
+
+运行输入 `Control Userpasswords2`, 在打开的窗口里选中要自动登陆的账号, 取消勾选用户登陆必须输入用户名和密码使用电脑, 然后点击保存输入账号的密码即可.
