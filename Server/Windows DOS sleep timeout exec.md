@@ -35,6 +35,24 @@ timeout /T 30
 goto retry
 ```
 
-可以把上面的脚本放到 `C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup` 就可以登陆自动启动了. 
+可以把上面的脚本保存成批处理文件(比如 __frpc-run.bat__ )放到 `C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup` 目录就可以登陆自动启动了. 
 
 运行里输入 `Control Userpasswords2` 可以设置开机自动登陆.
+
+下面是 frpc.ini 配置示例: 
+
+```ini
+[common]
+server_addr = sub.domain.com # 服务器地址(可以是域名/IP)
+server_port = 8000 # 服务器 frps 设置的端口号
+
+# 下面配置的是开放远程桌面
+[range:tcp_port]
+type = tcp
+local_ip = 127.0.0.1 
+local_port = 3389 # 本地机器的远程桌面端口号一般是 3389
+remote_port = 8019 # 远程可以指定任意一个未使用的端口号
+use_encryption = false
+```
+
+执行上面的脚本 __frpc-run.bat__ 就可以通过访问 `sub.domain.com:8019` 远程访问这个机器了.
