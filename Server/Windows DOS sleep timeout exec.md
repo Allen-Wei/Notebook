@@ -29,6 +29,7 @@ ping -n 11 127.0.0.1 > nul
 下面是使用 frp 工具示例, 每隔30s重试frpc连接, 直到连接成功:
 
 ```batch
+taskkill /F /IM frpc.exe REM 删除正在运行的 frpc.exe 程序
 :retry
 "C:\frp_0.29.1_windows_amd64\frpc.exe" -c "C:\frp_0.29.1_windows_amd64\frpc.ini"
 timeout /T 30
