@@ -23,9 +23,9 @@ c:\srvany\instsrv.exe "frpc" c:\srvany\srvany.exe
 
 ## 启动
 
-```bash
-sc start "frpc" #启动服务
-sc delete "frcp" #删除服务
+```batch
+sc start "frpc" REM 启动服务
+sc delete "frcp" REM 删除服务
 ```
 
 ## 设置Windows启动自动登陆:
