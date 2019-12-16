@@ -26,6 +26,14 @@
   {
     "key": "shift+alt+r",
     "command": "workbench.action.editorLayoutTwoRows"
+  },
+  {
+    "key": "shift+alt+t",
+    "command": "todohighlight.listAnnotations"
+  },
+  {
+    "key": "shift+alt+f",
+    "command": "editor.action.formatDocument"
   }
 ]
 ```
@@ -123,6 +131,27 @@
         ".gitlab": true
     },
     "extensions.autoUpdate": false,
+    "emmet.triggerExpansionOnTab": true,
+    "editor.minimap.showSlider": "mouseover",
+    "editor.minimap.enabled": false,
+    "editor.acceptSuggestionOnCommitCharacter": false,
+    "emmet.triggerExpansionOnTab": true,
+    "todohighlight.isEnable": true,
+    "todohighlight.keywords": [
+        {
+          "text": "NOTE:",
+          "isWholeLine": true,
+          "color": "#0094ff",
+          "backgroundColor": "rgba(100, 100, 100, 0.8)",
+        },
+        {
+          "text": "TODO",
+          "color": "red",
+          "backgroundColor": "rgba(0,0,0,.2)",
+          "isWholeLine": true
+        }
+    ],
+    "todohighlight.maxFilesForSearch": 5120
 }
 ```
 
