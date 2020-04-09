@@ -49,3 +49,16 @@ Move the current window one monitor to the left.
 ### Super+→
 
 Move the current window one monitor to the right.
+
+## Terminal
+
+* `Ctrl + A(head)` 移动到行首
+* `Ctrl + E(nd)` 移动到行尾
+* `Ctrl + U` 删除光标前内容
+* `Ctrl + K` 删除光标后内容
+* `Ctrl + W` 删除光标前单词
+* `Alt + D` 删除光标后单词
+* `Ctrl + D` 删除光标后字母
+* `Alt + F(orward)` 前进一个单词
+* `Alt + B(ack)` 后移一个单词
+* `Ctrl + L` 情况控制台
