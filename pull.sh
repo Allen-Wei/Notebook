@@ -1,4 +1,4 @@
-git pull origin master
-git pull gitlab master
-git pull github master
-git pull oschina master
+git pull origin master --rebase
+git pull gitlab master --rebase
+git pull github master --rebase
+git pull oschina master --rebase
