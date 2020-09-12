@@ -26,7 +26,7 @@ apt update
 apt install remmina remmina-plugin-rdp remmina-plugin-secret remmina-plugin-spice
 killall remmina
 
-# install docker
+# install official docker
 apt-get update
 apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common -y
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add - 
@@ -34,3 +34,16 @@ add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(
 apt-get update
 apt-get install docker-ce docker-ce-cli containerd.io -y
 docker --version
+
+# install docker by aliyun mirror
+apt-get update
+apt-get -y install apt-transport-https ca-certificates curl software-properties-common
+# step 2: 安装GPG证书
+curl -fsSL https://mirrors.aliyun.com/docker-ce/linux/ubuntu/gpg | sudo apt-key add -
+# Step 3: 写入软件源信息
+add-apt-repository "deb [arch=amd64] https://mirrors.aliyun.com/docker-ce/linux/ubuntu $(lsb_release -cs) stable"
+# Step 4: 更新并安装Docker-CE
+apt-get -y update
+apt-get -y install docker-ce
+
+snap install chromium

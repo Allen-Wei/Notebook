@@ -31,3 +31,14 @@ unmask NAME...
            This will undo the effect of mask. This command expects valid
            unit names only, it does not accept unit file paths.
 ```
+
+
+
+
+```bash
+# ref https://askubuntu.com/questions/181390/what-is-the-command-for-sleep-hibernate
+sudo apt install pm-utils -y
+sudo pm-suspend # sleep
+sudo pm-hibernate # (Note that Hibernation mode is not compatible with all hardware, please test this before using it.)
+sudo pm-suspend-hybrid
+```
