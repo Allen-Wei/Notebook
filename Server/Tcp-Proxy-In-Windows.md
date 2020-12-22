@@ -25,7 +25,7 @@ RabbitMQ还用到了其他端口号, 需要依次添加.
 	netsh interface portproxy add v4tov4 listenport=5672 listenaddress=192.168.1.50 connectaddress=192.168.60.128 connectport=5672 protocol=tcp
 
 这是我们当时的正式环境的网络设置情况. 你需要搞清楚服务器的网络位置和情况, 然后才能设置正确的 listenaddress(TCP请求的IP地址) 和 listenport(TCP请求的端口号).
-另外 netsh interface protproxy 目前支持tcp协议, 所以protocol=tcp这个参数可以省略.
+另外 netsh interface protproxy 目前只支持tcp协议, 所以protocol=tcp这个参数可以省略.
 
 
 
